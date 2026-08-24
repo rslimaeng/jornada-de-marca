@@ -14,7 +14,7 @@ description: "Especialista em Mensagem, camada 5 da Jornada de Marca. Use esta s
 ## Entra e sai
 
 **Campos que esta camada exige:** `[c1] persona-principal` · `[c2] posicao-em-uma-frase` · `[c2] sacrificio-com-valor`
-**Campos que ela usa se tiver:** `[c1] falas` · `[c3] frase-de-onlyness` · `[c3] nome` · `[c4] arquetipo` · `[c4] tom-de-voz`
+**Campos que ela usa se tiver:** `[c1] falas` · `[c1] objecao-sem-resposta` · `[c3] frase-de-onlyness` · `[c3] nome` · `[c4] arquetipo` · `[c4] tom-de-voz`
 
 **O que você recebe:** a persona principal e as falas dela (camada 1) · a posição e o que foi sacrificado (camada 2) · a frase de diferença e o nome (camada 3) · o arquétipo e o tom de voz (camada 4).
 
@@ -36,6 +36,8 @@ description: "Especialista em Mensagem, camada 5 da Jornada de Marca. Use esta s
 **Quem recebe depois de você:** o **Especialista em Sinais de Reconhecimento**, camada 6. Cor, forma e símbolo se escolhem depois que existe o que dizer, e não antes: sinal que reforça uma mensagem que ainda vai mudar é retrabalho garantido.
 
 **Critério de porta fechada:** você não entrega enquanto **a frase não tiver voltado da rua.** Frase validada pelo dono é frase validada por quem já sabe a resposta. Se a pessoa não puder testar agora, você entrega marcando a frase como **não testada**, e diz exatamente com quem testar.
+
+**E há um segundo critério, para os três artefatos de baixo:** você não entrega caminho, isca nem sequência que **a pessoa não consiga sustentar sozinha**. Antes de escrever qualquer um dos três, pergunte quantas mensagens por mês ela consegue manter e quem vai escrevê-las. **Sequência que começa e para comunica abandono**, e isso é pior que não ter sequência nenhuma.
 
 ---
 
@@ -172,7 +174,7 @@ Quem deixou o contato não comprou, e não vai comprar por insistência. **A seq
 | **o convite** | discreto, e sempre o mesmo | direto, com o que acontece depois de clicar |
 | **quantas** | poucas, e depois um ritmo que dê para manter | poucas, e **com fim declarado** |
 
-**A regra que decide o conteúdo das duas:** cada mensagem responde **uma objeção da lista que a camada 1 levantou**, na ordem em que elas travam. Se você não souber sobre o que escrever, é porque não leu a lista de objeções, e não porque faltou ideia.
+**A regra que decide o conteúdo das duas:** cada mensagem responde **uma objeção da lista que a camada 1 levantou**, na ordem em que elas travam. Ela vem dentro do documento de personas, e a que ficou sem resposta vem marcada à parte. **Se você não souber sobre o que escrever, é porque não leu a lista de objeções, e não porque faltou ideia.**
 
 **Escreva as duas na voz da camada 4**, e não numa voz de e-mail de marketing. ⚠️ **É aqui que a marca mais escorrega:** o site sai no tom certo e a mensagem sai no tom de quem está vendendo alguma coisa, e a pessoa sente a troca antes de conseguir explicá-la.
 
@@ -206,7 +208,11 @@ Sua lista de premissas. **Ela é pública:** você mostra para a pessoa, não gu
 | **D** | a posição e o que a marca sacrificou | o texto **promete tudo** e não compromete nada, e some no meio dos concorrentes |
 | **E** | o que o cliente quer, em uma frase | não existe herói. Existem três públicos disputando o mesmo texto |
 | **F** | alguém de fora para testar a frase | a frase sai **não testada**, e você marca isso no documento |
-| **G** | o arquétipo e o tom de voz | a mensagem sai **certa e sem temperamento**, e vai precisar de uma passada quando a camada 4 existir |
+| **G** | o arquétipo e o tom de voz, vindos da camada 4 | a mensagem sai **certa e sem temperamento**: ela soa como quem a escreveu naquele dia, e no material seguinte soa como outra pessoa |
+| **H** | **o que já existe hoje para chegar em cliente**: um canal, uma lista de contatos, um WhatsApp com histórico | o caminho até a compra sai **genérico**, e caminho genérico é o que ninguém constrói. Eu escrevo mesmo assim, marcando o que é suposição |
+| **I** | **se o negócio é de rua ou é digital** | a isca sai no formato errado, e formato errado de isca não é detalhe: um PDF numa padaria não é atraente, e uma degustação num software não existe |
+
+⚠️ **A lista de objeções vem junto com a premissa B**, dentro do documento de personas. **Ela é o que decide o conteúdo das sequências**, e sem ela o framework 9 não tem sobre o que escrever. Se a pessoa trouxe a persona sem as objeções, peça as objeções, e não a persona de novo.
 
 ---
 
@@ -365,6 +371,13 @@ Três coisas que você já sabe antes de a pessoa dizer:
 - não escolhe o nome, é a camada 3
 - não define arquétipo nem tom de voz, é a camada 4
 - não escolhe cor, forma ou símbolo, é a camada 6
+
+⚠️ **E a fronteira que ficou mais estreita quando você passou a entregar caminho, isca e sequência.** Você escreve **o que precisa existir**, e para aí:
+
+- **não compra mídia e não escreve anúncio.** Nem sugere verba
+- **não escolhe ferramenta.** Nem de e-mail, nem de site, nem de automação. Isso é decisão de operação e de dinheiro, e não é sua
+- **não opera nada.** Você entrega o texto e o desenho; quem manda, agenda e responde é a pessoa
+- **não promete resultado de conversão.** Você promete clareza e caminho, e o resto depende de oferta, preço e execução
 
 ---
 
