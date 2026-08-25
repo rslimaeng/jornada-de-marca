@@ -819,6 +819,68 @@ footer a:hover{color:var(--paper)}
   .camada-titulo{font-size:18px}
 }
 
+/* ==================== A TELA DO PROJETO ==================== */
+/* Molde: o componente `.tela` do padrao de treinamentos. Desenhada e nunca
+   printada, que e a regra de la: print envelhece na primeira atualizacao do
+   produto e mostra vinte coisas quando o conceito precisa de duas.
+   Traduzido para os tokens da bolha: sem sombra, raio 2px, paleta quente. */
+.tela{
+  background:var(--white);border:1px solid var(--line);border-radius:2px;
+  padding:24px 26px;margin:30px 0 0;
+}
+.tela-barra{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding-bottom:14px;border-bottom:1px solid var(--line);margin-bottom:20px;
+}
+.tela-pontos{display:flex;gap:6px;flex-shrink:0}
+.tela-pontos i{width:9px;height:9px;border-radius:50%;background:var(--coral)}
+.tela-onde{
+  font-family:var(--font-mono);font-size:11px;text-transform:uppercase;
+  letter-spacing:0.09em;color:var(--ink-3);text-align:right;
+}
+.tela-rot{
+  font-family:var(--font-mono);font-size:11px;text-transform:uppercase;
+  letter-spacing:0.08em;color:var(--ink-3);margin-bottom:7px;
+}
+.tela-nome{margin-bottom:20px}
+.tela-nome-v{
+  display:inline-block;font-family:var(--font-mono);font-size:15px;
+  background:var(--terra-bg);color:var(--terra);
+  padding:8px 14px;border-radius:2px;
+}
+.tela-campos{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+/* Tracejado nos dois campos: e uma area que a pessoa preenche, nao um bloco
+   que ja veio pronto. E a mesma leitura do componente de origem. */
+.tela-campo{
+  background:var(--paper-2);border:1px dashed var(--coral-dark);
+  border-radius:2px;padding:16px 18px;
+}
+.tela-campo h4{
+  font-family:var(--font-display);font-size:16px;font-weight:700;
+  color:var(--ink);margin:0 0 7px;line-height:1.3;
+}
+.tela-campo p{font-size:14.5px;line-height:1.55;color:var(--ink-2);margin:0}
+.tela-campo code{font-family:var(--font-mono);font-size:13.5px;color:var(--terra)}
+.tela-uso{
+  border-left:3px solid var(--coral);background:var(--paper-2);
+  border-radius:0 2px 2px 0;padding:14px 18px;margin-top:18px;
+}
+.tela-uso-rot{
+  font-family:var(--font-mono);font-size:11px;color:var(--ink-3);margin-bottom:7px;
+}
+.tela-uso-txt{font-family:var(--font-mono);font-size:14.5px;color:var(--ink);line-height:1.5}
+.tela-nota{
+  margin-top:16px;padding-top:14px;border-top:1px solid var(--line);
+  font-size:13.5px;color:var(--ink-3);line-height:1.55;
+}
+.tela-nota strong{color:var(--ink-2)}
+@media(max-width:820px){
+  .tela{padding:20px 18px}
+  .tela-barra{flex-wrap:wrap;gap:10px}
+  .tela-onde{text-align:left}
+  .tela-campos{grid-template-columns:1fr;gap:14px}
+}
+
 /* ==================== DIAGRAMAS ==================== */
 .diagram{
   background:var(--paper-3);border:1px solid var(--line);
@@ -917,6 +979,33 @@ footer a:hover{color:var(--paper)}
 </svg>
 </div>
 <div class="diagram-note">O caminho de cima é o mesmo para os dois: você decide se já sabe do que precisa. <strong>Quem não sabe vai pelo Projeto</strong>, porque é lá que existe alguém para descobrir isso por você. Quem sabe pega a skill e conduz sozinho, e assume junto a conta de escolher errado a camada.</div>
+</div>
+<div class="tela">
+<div class="tela-barra">
+<div class="tela-pontos"><i></i><i></i><i></i></div>
+<div class="tela-onde">o Projeto no Claude · onde cada arquivo vai</div>
+</div>
+<div class="tela-nome">
+<div class="tela-rot">Nome do projeto</div>
+<span class="tela-nome-v">Jornada de Marca</span>
+</div>
+<div class="tela-campos">
+<div class="tela-campo">
+<div class="tela-rot">Campo · instruções</div>
+<h4>Cole o <code>orquestrador.md</code></h4>
+<p>É o Diretor de Marca. Ele recebe, descobre em que camada você está, e encaminha para o especialista daquela camada.</p>
+</div>
+<div class="tela-campo">
+<div class="tela-rot">Campo · conhecimento</div>
+<h4>Suba o <code>monolitico.md</code></h4>
+<p>São as 7 camadas num arquivo só. Ele consulta a camada que a conversa pedir.</p>
+</div>
+</div>
+<div class="tela-uso">
+<div class="tela-uso-rot">na primeira conversa · você digita:</div>
+<div class="tela-uso-txt">Eu tenho uma padaria de bairro. Por onde eu começo?</div>
+</div>
+<div class="tela-nota"><strong>As instruções valem em toda conversa; o conhecimento é consultado quando a conversa pede.</strong> É por isso que o Diretor vai num campo e as camadas vão no outro: você quer o Diretor presente o tempo todo, e cada camada só quando a conversa chegar nela.</div>
 </div>
 <div class="principle-callout" style="margin-top:26px"><p style="margin-bottom:0"><strong>Os dois arquivos são gerados das mesmas fontes que as skills, e não editados à mão.</strong> Quando uma camada é corrigida, os dois saem corrigidos juntos, senão a correção viveria num lugar só e os arquivos passariam a dizer coisas diferentes.</p></div>
 </div></section>
