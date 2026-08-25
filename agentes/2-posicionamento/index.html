@@ -1287,6 +1287,121 @@ h4.sub{
   font-family:var(--font-display);font-size:16px;font-weight:600;color:var(--ink);
   margin:30px 0 6px;
 }
+
+/* ==================== CONTRASTE TRIO · três e três, em cartão ====================
+   Variante do .contraste de duas colunas com lista. Três e três é o tamanho que
+   o padrão de treinamentos manda: "com cinco de cada lado vira lista, e lista
+   ninguém lê". O cartão não leva borda esquerda grossa colorida, que o mesmo
+   padrão proíbe porque ela desalinha o texto do resto da coluna.            */
+.contraste.trio{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+@media(max-width:880px){.contraste.trio{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.contraste.trio{grid-template-columns:minmax(0,1fr)}}
+.ctr-selo{
+  display:inline-block;font-family:var(--font-mono);font-size:10px;font-weight:500;
+  text-transform:uppercase;letter-spacing:.09em;padding:3px 10px;border-radius:100px;
+  margin-bottom:12px;
+}
+.ctr.faz .ctr-selo{background:var(--verde-bg);color:var(--verde)}
+.ctr.nao .ctr-selo{background:var(--vermelho-bg);color:var(--vermelho)}
+.ctr h4{
+  font-family:var(--font-display);font-size:15.5px;font-weight:700;color:var(--ink);
+  line-height:1.3;margin:0 0 7px;
+}
+.ctr p{font-size:14.5px;color:var(--ink-2);line-height:1.55;margin:0}
+
+/* ==================== CADEIA · a corrente das camadas em pílula ====================
+   Substitui o SVG de sete caixas de 120px, que espremia o nome em duas linhas.
+   A pílula cresce com o nome em vez de espremê-lo, e quebra sozinha em tela
+   estreita. 🔴 Ela vem SEMPRE depois da frase em português que diz o caminho
+   inteiro: sozinha, vira decoração técnica e a pessoa não técnica desliga.  */
+.frase-mapa{font-size:16.5px;color:var(--ink);line-height:1.6;margin:26px 0 18px}
+.cadeia{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0}
+/* A seta vem ANTES da sua pílula, dentro do mesmo elo. Solta entre as duas,
+   ela fica pendurada no fim da linha assim que a corrente quebra. */
+.cad-elo{display:inline-flex;align-items:center;gap:8px}
+/* Prefixo `cad-` porque `.no` JA EXISTIA como modificador de `.rec-col` (a
+   coluna "Ele recusa") em seis das sete paginas. Sem o prefixo, o
+   `white-space:nowrap` daqui caiu naquela coluna e estourou a pagina da
+   camada 2 em 924px. O mesmo vale para `.aqui`, que ja existia na camada 2. */
+.cad-no{
+  font-family:var(--font-mono);font-size:12.5px;padding:9px 14px;border-radius:2px;
+  background:var(--white);border:1px solid var(--line);color:var(--ink-2);white-space:nowrap;
+}
+.cad-no.cad-aqui{background:var(--terra-bg);border-color:var(--terra);color:var(--terra);font-weight:700}
+.cad-no.cad-cond{border-style:dashed;color:var(--ink-3);background:transparent}
+.cad-seta{color:var(--ink-3);font-size:13px;flex:none}
+.cond-linha{margin-top:14px;padding-top:14px;border-top:1px solid var(--line-soft)}
+.cond-rot{
+  font-family:var(--font-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-3);margin-right:4px;
+}
+
+/* ==================== PLANILHA · a prévia com a lacuna pintada ====================
+   A prévia era texto com <br> e "·" fingindo ser tabela: nada alinhava e a
+   lacuna sumia no meio da frase. Aqui a lacuna é uma CÉLULA, que é o que ela
+   é na planilha que a pessoa vai baixar.                                    */
+.table-scroll.planilha{
+  border:1px solid var(--line);border-radius:2px;background:var(--white);
+  margin:22px 0 0;padding:0;
+}
+.table-scroll.planilha table{min-width:720px}
+.table-scroll.planilha th.sua{color:var(--terra)}
+.table-scroll.planilha td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.table-scroll.planilha td.nome{font-weight:600;color:var(--ink);white-space:nowrap}
+/* Sem a divisória as três lacunas leem como UMA área tingida, e a pessoa não
+   vê que são três colunas para preencher. */
+.table-scroll.planilha td.lacuna{background:var(--terra-bg);border-left:1px solid var(--coral-dark)}
+
+/* ==================== TURNO · quem fala, e quantos faltam ====================
+   Trocou o círculo de 52px com o número em serifa, que ficava fora da coluna
+   de texto e não codificava nada que o número em mono não codifique. O que
+   entra no lugar é a informação que faltava: DE QUEM É A VEZ. Sem o chip do
+   ator, uma sequência de turnos vira uma lista de coisas que acontecem
+   sozinhas, e a pessoa não sabe onde ela entra.                             */
+.turno-topo{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:10px}
+.turno-n{
+  font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-3);
+}
+.quem{
+  font-family:var(--font-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
+  padding:4px 11px;border-radius:100px;white-space:nowrap;
+}
+.quem.voce{background:var(--petrol-bg);color:var(--petrol)}
+.quem.ele{background:var(--terra-bg);color:var(--terra)}
+.turno-topo h3{
+  font-family:var(--font-display);font-size:22px;font-weight:700;letter-spacing:-.01em;
+  line-height:1.25;color:var(--ink);flex-basis:100%;margin:0;
+}
+
+/* O trilho de cor diz de quem é a vez sem precisar ler o chip de novo. */
+.passo.dele{border-left:3px solid var(--coral);padding-left:26px}
+.passo.sua{border-left:3px solid var(--petrol);padding-left:26px}
+@media(max-width:640px){
+  .passo.dele,.passo.sua{padding-left:16px}
+}
+
+/* ==================== CONTEXT-COL · sem o trilho que passou a competir ====================
+   O .context-col local nascia com borda esquerda de 3px colorida, que o padrão
+   de treinamentos proíbe ("ela desalinha o texto do resto da coluna"). Enquanto
+   o passo não tinha trilho, dava para conviver. Com o trilho do turno, viraram
+   DOIS trilhos verticais aninhados, e no turno 1 os dois em petróleo. O
+   cabeçalho colorido com filete carrega a mesma distinção sem competir.
+   O kit é injetado depois do CSS local, então empata em especificidade e ganha
+   pela ordem, sem precisar de !important.                                    */
+/* Escopado ao turno: as seis paginas que ainda nao foram convertidas nao tem
+   trilho, entao nao tem conflito, e nao ganham mudanca visual que ninguem
+   pediu. Quando cada uma virar turno, ela herda isto de graca. */
+.passo.sua .context-col.required,
+.passo.sua .context-col.optional,
+.passo.dele .context-col.required,
+.passo.dele .context-col.optional{border-left:1px solid var(--line)}
+.passo.sua .context-col.optional,
+.passo.dele .context-col.optional{background:var(--paper-3)}
+.passo.sua .context-col h4,
+.passo.dele .context-col h4{
+  padding-bottom:11px;margin-bottom:15px;border-bottom:1px solid var(--line);
+}
 /* ==== FIM KIT ==== */
 </style>
 </head>

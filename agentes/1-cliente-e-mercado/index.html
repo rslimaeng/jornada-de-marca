@@ -1287,6 +1287,121 @@ h4.sub{
   font-family:var(--font-display);font-size:16px;font-weight:600;color:var(--ink);
   margin:30px 0 6px;
 }
+
+/* ==================== CONTRASTE TRIO · três e três, em cartão ====================
+   Variante do .contraste de duas colunas com lista. Três e três é o tamanho que
+   o padrão de treinamentos manda: "com cinco de cada lado vira lista, e lista
+   ninguém lê". O cartão não leva borda esquerda grossa colorida, que o mesmo
+   padrão proíbe porque ela desalinha o texto do resto da coluna.            */
+.contraste.trio{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+@media(max-width:880px){.contraste.trio{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.contraste.trio{grid-template-columns:minmax(0,1fr)}}
+.ctr-selo{
+  display:inline-block;font-family:var(--font-mono);font-size:10px;font-weight:500;
+  text-transform:uppercase;letter-spacing:.09em;padding:3px 10px;border-radius:100px;
+  margin-bottom:12px;
+}
+.ctr.faz .ctr-selo{background:var(--verde-bg);color:var(--verde)}
+.ctr.nao .ctr-selo{background:var(--vermelho-bg);color:var(--vermelho)}
+.ctr h4{
+  font-family:var(--font-display);font-size:15.5px;font-weight:700;color:var(--ink);
+  line-height:1.3;margin:0 0 7px;
+}
+.ctr p{font-size:14.5px;color:var(--ink-2);line-height:1.55;margin:0}
+
+/* ==================== CADEIA · a corrente das camadas em pílula ====================
+   Substitui o SVG de sete caixas de 120px, que espremia o nome em duas linhas.
+   A pílula cresce com o nome em vez de espremê-lo, e quebra sozinha em tela
+   estreita. 🔴 Ela vem SEMPRE depois da frase em português que diz o caminho
+   inteiro: sozinha, vira decoração técnica e a pessoa não técnica desliga.  */
+.frase-mapa{font-size:16.5px;color:var(--ink);line-height:1.6;margin:26px 0 18px}
+.cadeia{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0}
+/* A seta vem ANTES da sua pílula, dentro do mesmo elo. Solta entre as duas,
+   ela fica pendurada no fim da linha assim que a corrente quebra. */
+.cad-elo{display:inline-flex;align-items:center;gap:8px}
+/* Prefixo `cad-` porque `.no` JA EXISTIA como modificador de `.rec-col` (a
+   coluna "Ele recusa") em seis das sete paginas. Sem o prefixo, o
+   `white-space:nowrap` daqui caiu naquela coluna e estourou a pagina da
+   camada 2 em 924px. O mesmo vale para `.aqui`, que ja existia na camada 2. */
+.cad-no{
+  font-family:var(--font-mono);font-size:12.5px;padding:9px 14px;border-radius:2px;
+  background:var(--white);border:1px solid var(--line);color:var(--ink-2);white-space:nowrap;
+}
+.cad-no.cad-aqui{background:var(--terra-bg);border-color:var(--terra);color:var(--terra);font-weight:700}
+.cad-no.cad-cond{border-style:dashed;color:var(--ink-3);background:transparent}
+.cad-seta{color:var(--ink-3);font-size:13px;flex:none}
+.cond-linha{margin-top:14px;padding-top:14px;border-top:1px solid var(--line-soft)}
+.cond-rot{
+  font-family:var(--font-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-3);margin-right:4px;
+}
+
+/* ==================== PLANILHA · a prévia com a lacuna pintada ====================
+   A prévia era texto com <br> e "·" fingindo ser tabela: nada alinhava e a
+   lacuna sumia no meio da frase. Aqui a lacuna é uma CÉLULA, que é o que ela
+   é na planilha que a pessoa vai baixar.                                    */
+.table-scroll.planilha{
+  border:1px solid var(--line);border-radius:2px;background:var(--white);
+  margin:22px 0 0;padding:0;
+}
+.table-scroll.planilha table{min-width:720px}
+.table-scroll.planilha th.sua{color:var(--terra)}
+.table-scroll.planilha td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.table-scroll.planilha td.nome{font-weight:600;color:var(--ink);white-space:nowrap}
+/* Sem a divisória as três lacunas leem como UMA área tingida, e a pessoa não
+   vê que são três colunas para preencher. */
+.table-scroll.planilha td.lacuna{background:var(--terra-bg);border-left:1px solid var(--coral-dark)}
+
+/* ==================== TURNO · quem fala, e quantos faltam ====================
+   Trocou o círculo de 52px com o número em serifa, que ficava fora da coluna
+   de texto e não codificava nada que o número em mono não codifique. O que
+   entra no lugar é a informação que faltava: DE QUEM É A VEZ. Sem o chip do
+   ator, uma sequência de turnos vira uma lista de coisas que acontecem
+   sozinhas, e a pessoa não sabe onde ela entra.                             */
+.turno-topo{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:10px}
+.turno-n{
+  font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-3);
+}
+.quem{
+  font-family:var(--font-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
+  padding:4px 11px;border-radius:100px;white-space:nowrap;
+}
+.quem.voce{background:var(--petrol-bg);color:var(--petrol)}
+.quem.ele{background:var(--terra-bg);color:var(--terra)}
+.turno-topo h3{
+  font-family:var(--font-display);font-size:22px;font-weight:700;letter-spacing:-.01em;
+  line-height:1.25;color:var(--ink);flex-basis:100%;margin:0;
+}
+
+/* O trilho de cor diz de quem é a vez sem precisar ler o chip de novo. */
+.passo.dele{border-left:3px solid var(--coral);padding-left:26px}
+.passo.sua{border-left:3px solid var(--petrol);padding-left:26px}
+@media(max-width:640px){
+  .passo.dele,.passo.sua{padding-left:16px}
+}
+
+/* ==================== CONTEXT-COL · sem o trilho que passou a competir ====================
+   O .context-col local nascia com borda esquerda de 3px colorida, que o padrão
+   de treinamentos proíbe ("ela desalinha o texto do resto da coluna"). Enquanto
+   o passo não tinha trilho, dava para conviver. Com o trilho do turno, viraram
+   DOIS trilhos verticais aninhados, e no turno 1 os dois em petróleo. O
+   cabeçalho colorido com filete carrega a mesma distinção sem competir.
+   O kit é injetado depois do CSS local, então empata em especificidade e ganha
+   pela ordem, sem precisar de !important.                                    */
+/* Escopado ao turno: as seis paginas que ainda nao foram convertidas nao tem
+   trilho, entao nao tem conflito, e nao ganham mudanca visual que ninguem
+   pediu. Quando cada uma virar turno, ela herda isto de graca. */
+.passo.sua .context-col.required,
+.passo.sua .context-col.optional,
+.passo.dele .context-col.required,
+.passo.dele .context-col.optional{border-left:1px solid var(--line)}
+.passo.sua .context-col.optional,
+.passo.dele .context-col.optional{background:var(--paper-3)}
+.passo.sua .context-col h4,
+.passo.dele .context-col h4{
+  padding-bottom:11px;margin-bottom:15px;border-bottom:1px solid var(--line);
+}
 /* ==== FIM KIT ==== */
 </style>
 </head>
@@ -1354,28 +1469,31 @@ h4.sub{
     <div class="step-eyebrow">Quem é este especialista</div>
     <h2>O que ele faz, <em>o que ele recusa</em>, e o que você recebe.</h2>
 
-    <div class="rec-grid">
-      <div class="rec-col yes">
-        <h4>Ele faz</h4>
-        <ul>
-          <li>descobre quem compra, com nome, rotina e horário</li>
-          <li>calcula quantas dessas pessoas o negócio precisa por mês</li>
-          <li>mede quantas existem no lugar onde você vai abrir</li>
-          <li>coleta as palavras que essas pessoas usam, sem corrigir</li>
-          <li>escreve a objeção que ninguém sabe responder ainda</li>
-        </ul>
-      </div>
-      <div class="rec-col no">
-        <h4>Ele recusa</h4>
-        <ul>
-          <li>escolher nome: é a camada 3, Diferença e Nome</li>
-          <li>escolher cor ou tipografia: são as camadas 6 e 7</li>
-          <li>escrever headline ou texto de site: é a camada 5, Mensagem</li>
-          <li>decidir o que sacrificar: é a camada 2, Posicionamento</li>
-        </ul>
-        <p style="margin-top:14px"><strong>Não por preciosismo.</strong> Cada uma dessas
-        precisa do que esta camada produz, e sai errada sem ela.</p>
-      </div>
+    <div class="contraste trio">
+      <div class="ctr faz"><span class="ctr-selo">Ele faz</span>
+        <h4>Descobre quem compra</h4>
+        <p>Com nome, rotina e horário. Não o perfil: a pessoa, e a hora em que ela passa na porta.</p></div>
+      <div class="ctr faz"><span class="ctr-selo">Ele faz</span>
+        <h4>Faz a conta de quantos</h4>
+        <p>Quantas dessas pessoas o negócio precisa por mês, contra quantas existem no lugar onde você vai abrir.</p></div>
+      <div class="ctr faz"><span class="ctr-selo">Ele faz</span>
+        <h4>Coleta as palavras deles</h4>
+        <p>As falas textuais, sem corrigir, e a objeção que ninguém sabe responder ainda.</p></div>
+      <div class="ctr nao"><span class="ctr-selo">Ele recusa</span>
+        <h4>Escolher o nome</h4>
+        <p>É a camada 3. Nome é resposta, e ele ainda está montando a pergunta.</p></div>
+      <div class="ctr nao"><span class="ctr-selo">Ele recusa</span>
+        <h4>Escolher cor ou tipografia</h4>
+        <p>São as camadas 6 e 7, e as duas precisam do que esta aqui produz.</p></div>
+      <div class="ctr nao"><span class="ctr-selo">Ele recusa</span>
+        <h4>Decidir o que sacrificar</h4>
+        <p>É a camada 2. Sem saber quem compra, sacrifício vira chute.</p></div>
+    </div>
+
+    <div class="aviso">
+      <span class="aviso-t">Não por preciosismo</span>
+      <p>Cada uma das três recusas precisa do que esta camada produz, e sai errada sem ela.
+      Escrever a mensagem antes de saber quem lê é escrever para ninguém.</p>
     </div>
 
     <h3 class="sub">O que você recebe no fim</h3>
@@ -1395,82 +1513,28 @@ h4.sub{
       </div>
     </div>
 
-    <div class="diagram" style="margin-top:28px">
-      <div class="diagram-head">A JORNADA DE MARCA · 7 CAMADAS</div>
-      <div class="diagram-title">Cada camada recebe o artefato da anterior. Esta é a primeira.</div>
-      <div class="diagram-scroll">
-        <svg viewBox="0 0 1008 168" role="img" aria-labelledby="jornada-title jornada-desc">
-          <title id="jornada-title">As sete camadas da Jornada de Marca</title>
-          <desc id="jornada-desc">Sequência de sete camadas em ordem, da primeira à sétima: Cliente e Mercado, Posicionamento, Diferença e Nome, Personalidade e Voz, Mensagem, Sinais de Reconhecimento, e Manual e Apresentação. A primeira está destacada porque é a camada desta página, e cada camada entrega o resultado para a seguinte.</desc>
+    <p class="frase-mapa"><strong>Em uma frase:</strong> você entra dizendo o que vende, e sai com uma
+    marca inteira. No caminho são sete decisões, e <strong>cada uma usa o que a anterior escreveu</strong>:
+    quem compra, onde a marca se planta, a frase que só ela pode dizer, o jeito de falar, a mensagem,
+    os sinais que fazem reconhecer, e o manual que faz alguém de fora executar. Decidir o nome antes de
+    saber quem compra é escolher a fachada antes de saber quem passa na rua.
+    <strong>Esta página é a primeira.</strong></p>
 
-          <rect width="100%" height="100%" fill="var(--paper-3)"/>
-
-          <defs>
-            <marker id="jr-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-              <polygon points="0 0, 8 3, 0 6" fill="var(--ink-3)"/>
-            </marker>
-          </defs>
-
-          <!-- setas primeiro, para ficarem atras das caixas -->
-          <line x1="144" y1="88" x2="162" y2="88" stroke="var(--ink-3)" stroke-width="1" marker-end="url(#jr-arrow)"/>
-          <line x1="284" y1="88" x2="302" y2="88" stroke="var(--ink-3)" stroke-width="1" marker-end="url(#jr-arrow)"/>
-          <line x1="424" y1="88" x2="442" y2="88" stroke="var(--ink-3)" stroke-width="1" marker-end="url(#jr-arrow)"/>
-          <line x1="564" y1="88" x2="582" y2="88" stroke="var(--ink-3)" stroke-width="1" marker-end="url(#jr-arrow)"/>
-          <line x1="704" y1="88" x2="722" y2="88" stroke="var(--ink-3)" stroke-width="1" marker-end="url(#jr-arrow)"/>
-          <line x1="844" y1="88" x2="862" y2="88" stroke="var(--ink-3)" stroke-width="1" marker-end="url(#jr-arrow)"/>
-
-          <!-- 1 · focal -->
-          <text x="84" y="36" class="d-lbl" style="fill:var(--terra)" text-anchor="middle">VOCÊ ESTÁ AQUI</text>
-          <rect x="24" y="48" width="120" height="80" rx="2" fill="var(--terra-bg)" stroke="var(--terra)" stroke-width="1.2"/>
-          <rect x="32" y="56" width="28" height="16" rx="2" fill="none" stroke="var(--terra)" stroke-width="0.8" opacity="0.5"/>
-          <text x="46" y="68" class="d-lbl" style="fill:var(--terra)" text-anchor="middle">01</text>
-          <text x="84" y="96" class="d-cap-b" text-anchor="middle">Cliente e</text>
-          <text x="84" y="114" class="d-cap-b" text-anchor="middle">Mercado</text>
-
-          <!-- 2 -->
-          <rect x="164" y="48" width="120" height="80" rx="2" fill="var(--white)" stroke="var(--line)" stroke-width="1"/>
-          <rect x="172" y="56" width="28" height="16" rx="2" fill="none" stroke="var(--line)" stroke-width="0.8"/>
-          <text x="186" y="68" class="d-lbl" text-anchor="middle">02</text>
-          <text x="224" y="104" class="d-cap" text-anchor="middle">Posicionamento</text>
-
-          <!-- 3 -->
-          <rect x="304" y="48" width="120" height="80" rx="2" fill="var(--white)" stroke="var(--line)" stroke-width="1"/>
-          <rect x="312" y="56" width="28" height="16" rx="2" fill="none" stroke="var(--line)" stroke-width="0.8"/>
-          <text x="326" y="68" class="d-lbl" text-anchor="middle">03</text>
-          <text x="364" y="96" class="d-cap" text-anchor="middle">Diferença</text>
-          <text x="364" y="114" class="d-cap" text-anchor="middle">e Nome</text>
-
-          <!-- 4 -->
-          <rect x="444" y="48" width="120" height="80" rx="2" fill="var(--white)" stroke="var(--line)" stroke-width="1"/>
-          <rect x="452" y="56" width="28" height="16" rx="2" fill="none" stroke="var(--line)" stroke-width="0.8"/>
-          <text x="466" y="68" class="d-lbl" text-anchor="middle">04</text>
-          <text x="504" y="96" class="d-cap" text-anchor="middle">Personalidade</text>
-          <text x="504" y="114" class="d-cap" text-anchor="middle">e Voz</text>
-
-          <!-- 5 -->
-          <rect x="584" y="48" width="120" height="80" rx="2" fill="var(--white)" stroke="var(--line)" stroke-width="1"/>
-          <rect x="592" y="56" width="28" height="16" rx="2" fill="none" stroke="var(--line)" stroke-width="0.8"/>
-          <text x="606" y="68" class="d-lbl" text-anchor="middle">05</text>
-          <text x="644" y="104" class="d-cap" text-anchor="middle">Mensagem</text>
-
-          <!-- 6 -->
-          <rect x="724" y="48" width="120" height="80" rx="2" fill="var(--white)" stroke="var(--line)" stroke-width="1"/>
-          <rect x="732" y="56" width="28" height="16" rx="2" fill="none" stroke="var(--line)" stroke-width="0.8"/>
-          <text x="746" y="68" class="d-lbl" text-anchor="middle">06</text>
-          <text x="784" y="96" class="d-cap" text-anchor="middle">Sinais de</text>
-          <text x="784" y="114" class="d-cap" text-anchor="middle">Reconhecimento</text>
-
-          <!-- 7 -->
-          <rect x="864" y="48" width="120" height="80" rx="2" fill="var(--white)" stroke="var(--line)" stroke-width="1"/>
-          <rect x="872" y="56" width="28" height="16" rx="2" fill="none" stroke="var(--line)" stroke-width="0.8"/>
-          <text x="886" y="68" class="d-lbl" text-anchor="middle">07</text>
-          <text x="924" y="96" class="d-cap" text-anchor="middle">Manual</text>
-          <text x="924" y="114" class="d-cap" text-anchor="middle">e Deck</text>
-        </svg>
-      </div>
-      <div class="diagram-note">A ordem não é preferência: cada camada usa o que a anterior escreveu. Decidir o nome antes de saber quem compra é escolher a fachada antes de saber quem passa na rua. ✅ <strong>As sete camadas da jornada existem</strong>: as duas condicionais, no fim do diagrama, só entram em negócio com mais de uma linha de produto ou com time montado.</div>
+    <div class="cadeia">
+      <span class="cad-no cad-aqui">01 · Cliente e Mercado</span>
+      <span class="cad-elo"><span class="cad-seta">&rarr;</span><span class="cad-no">02 · Posicionamento</span></span>
+      <span class="cad-elo"><span class="cad-seta">&rarr;</span><span class="cad-no">03 · Diferença e Nome</span></span>
+      <span class="cad-elo"><span class="cad-seta">&rarr;</span><span class="cad-no">04 · Personalidade e Voz</span></span>
+      <span class="cad-elo"><span class="cad-seta">&rarr;</span><span class="cad-no">05 · Mensagem</span></span>
+      <span class="cad-elo"><span class="cad-seta">&rarr;</span><span class="cad-no">06 · Sinais de Reconhecimento</span></span>
+      <span class="cad-elo"><span class="cad-seta">&rarr;</span><span class="cad-no">07 · Manual e Apresentação</span></span>
     </div>
-  </div>
+    <div class="cadeia cond-linha">
+      <span class="cond-rot">fora da ordem, e só se o negócio pedir</span>
+      <span class="cad-no cad-cond">Arquitetura de Marca</span>
+      <span class="cad-no cad-cond">Marca na Operação</span>
+    </div>
+
 </section>
 
 <section class="step" id="conceito">
@@ -1654,8 +1718,9 @@ h4.sub{
       </table>
     </div>
 
-    <div class="principle-callout">
-      <p><strong>Por que só a A trava.</strong> Um agente que exige as sete antes de abrir a boca é um formulário, não um especialista. Quem está começando raramente tem B e C fechados, e é justamente essa pessoa que mais precisa da conta. <strong>Ele trabalha com o que tem e mostra a fatura.</strong></p>
+    <div class="aviso atencao">
+      <span class="aviso-t">Por que só a A trava</span>
+      <p> Um agente que exige as sete antes de abrir a boca é um formulário, não um especialista. Quem está começando raramente tem B e C fechados, e é justamente essa pessoa que mais precisa da conta. <strong>Ele trabalha com o que tem e mostra a fatura.</strong></p>
     </div>
 
     <div class="diagram" style="margin-top:28px">
@@ -1767,12 +1832,21 @@ h4.sub{
       <span class="dl-tab">4 · A persona escolhida</span>
     </div>
 
-    <div class="dl-peek">
-      <div class="dl-peek-h">Aba 3 · o que está em branco é o exercício inteiro</div>
-      <div class="dl-peek-b">Persona · Quem é · Visitas/mês · Ticket · <strong>Gasta por mês</strong> · <strong>Casas que você precisa</strong> · <strong>Casas que existem</strong><br>
-      Cleide · 47 anos, passa às 18h10 · 13 · R$ 17,00 · ⟨ ⟩ · ⟨ ⟩ · ⟨ ⟩<br>
-      Márcia · marido passa mal com pão comum · 8,7 · R$ 36,00 · ⟨ ⟩ · ⟨ ⟩ · ⟨ ⟩<br>
-      Reginaldo · aposentado, vai toda manhã · 26 · R$ 6,00 · ⟨ ⟩ · ⟨ ⟩ · ⟨ ⟩</div>
+    <div class="table-scroll planilha">
+      <table>
+        <thead><tr>
+          <th>Persona</th><th>Quem é</th><th>Visitas/mês</th><th>Ticket</th>
+          <th class="sua">Gasta por mês</th><th class="sua">Casas que você precisa</th><th class="sua">Casas que existem</th>
+        </tr></thead>
+        <tbody>
+          <tr><td class="nome">Cleide</td><td>47 anos, passa às 18h10</td><td class="num">13</td><td class="num">R$ 17,00</td>
+              <td class="lacuna"></td><td class="lacuna"></td><td class="lacuna"></td></tr>
+          <tr><td class="nome">Márcia</td><td>marido passa mal com pão comum</td><td class="num">8,7</td><td class="num">R$ 36,00</td>
+              <td class="lacuna"></td><td class="lacuna"></td><td class="lacuna"></td></tr>
+          <tr><td class="nome">Reginaldo</td><td>aposentado, vai toda manhã</td><td class="num">26</td><td class="num">R$ 6,00</td>
+              <td class="lacuna"></td><td class="lacuna"></td><td class="lacuna"></td></tr>
+        </tbody>
+      </table>
     </div>
     <p class="diagram-note">As três colunas em branco são as que decidem. Se você preencher só as duas primeiras, vai escolher pelo gasto mensal, que é o número que engana.</p>
   </div>
@@ -1784,13 +1858,11 @@ h4.sub{
     <h2>Sete turnos, <em>do prompt errado ao documento</em>.</h2>
     <p>O que está abaixo é uma conversa real do começo ao fim, com o que o especialista
     responde em cada turno e o que reparar em cada um.</p>
-<section class="passo" id="p1">
-  <div class="passo-topo">
-    <div class="passo-n">01</div>
-    <div>
-      <div class="passo-fn">Passo 1</div>
-      <h3>O que você cola na conversa</h3>
-    </div>
+<section class="passo sua" id="p1">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 1 de 7</span>
+    <span class="quem voce">Sua vez</span>
+    <h3>O que você cola na conversa</h3>
   </div>
 <p>Se faltar, ele pergunta, e não avança sem. Isso é de propósito.</p>
 
@@ -1825,13 +1897,11 @@ h4.sub{
   </div>
 </section>
 
-<section class="passo" id="p2">
-  <div class="passo-topo">
-    <div class="passo-n">02</div>
-    <div>
-      <div class="passo-fn">Passo 2</div>
-      <h3>Ele recusa, e explica por quê</h3>
-    </div>
+<section class="passo dele" id="p2">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 2 de 7</span>
+    <span class="quem ele">O especialista</span>
+    <h3>Ele recusa, e explica por quê</h3>
   </div>
 <div class="reply-box" data-advisor="Especialista em Cliente e Mercado">
       <p><strong>Especialista em Cliente e Mercado.</strong></p>
@@ -1848,13 +1918,11 @@ h4.sub{
     </div>
 </section>
 
-<section class="passo" id="p3">
-  <div class="passo-topo">
-    <div class="passo-n">03</div>
-    <div>
-      <div class="passo-fn">Passo 3</div>
-      <h3>A conta que vira a chave</h3>
-    </div>
+<section class="passo dele" id="p3">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 3 de 7</span>
+    <span class="quem ele">O especialista</span>
+    <h3>A conta que vira a chave</h3>
   </div>
 <div class="reply-box" data-advisor="Especialista em Cliente e Mercado">
       <p>Antes, um ajuste: 12.000 é gente. Mas <strong>quem compra pão é a casa, não cada pessoa</strong>. Numa casa, uma pessoa passa na padaria e leva para todo mundo. Com a média brasileira de 2,9 moradores por domicílio, seu bairro tem <strong>4.138 casas</strong>. É esse o número que conta.</p>
@@ -1865,18 +1933,17 @@ h4.sub{
       <p>Você não precisa ganhar do Nilton. Precisa de 160 casas para quem você seja a única opção, e o Nilton, para essas 160, não pode ser opção nenhuma.</p>
     </div>
 
-    <div class="principle-callout">
-      <p><strong>Essa conta é o motivo de a camada existir antes das outras seis.</strong> Sem ela, escolher um público parece perder dinheiro. Com ela, escolher um público é a única coisa que faz a conta fechar.</p>
+    <div class="aviso atencao">
+      <span class="aviso-t">Essa conta é o motivo de a camada existir antes das outras seis</span>
+      <p>Sem ela, escolher um público parece perder dinheiro. Com ela, escolher um público é a única coisa que faz a conta fechar.</p>
     </div>
 </section>
 
-<section class="passo" id="p4">
-  <div class="passo-topo">
-    <div class="passo-n">04</div>
-    <div>
-      <div class="passo-fn">Passo 4</div>
-      <h3>O trabalho que ele manda você fazer</h3>
-    </div>
+<section class="passo sua" id="p4">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 4 de 7</span>
+    <span class="quem voce">Sua vez</span>
+    <h3>O trabalho que ele manda você fazer</h3>
   </div>
 <div class="reply-box" data-advisor="Especialista em Cliente e Mercado">
       <p>Eu posso inventar essas 160 casas agora. Vai sair bonito e vai estar errado. Vai ser um retrato de quem você <strong>queria</strong> que entrasse na sua loja.</p>
@@ -1886,13 +1953,11 @@ h4.sub{
     </div>
 </section>
 
-<section class="passo" id="p5">
-  <div class="passo-topo">
-    <div class="passo-n">05</div>
-    <div>
-      <div class="passo-fn">Passo 5</div>
-      <h3>O que ele abre na tela</h3>
-    </div>
+<section class="passo dele" id="p5">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 5 de 7</span>
+    <span class="quem ele">O especialista</span>
+    <h3>O que ele abre na tela</h3>
   </div>
 
   <p>Nada foi corrigido. Não melhoramos a frase, não consertamos o português, não trocamos
@@ -1969,13 +2034,11 @@ h4.sub{
 </section>
 
 
-<section class="passo" id="p6">
-  <div class="passo-topo">
-    <div class="passo-n">06</div>
-    <div>
-      <div class="passo-fn">Passo 6</div>
-      <h3>O momento de escolher</h3>
-    </div>
+<section class="passo sua" id="p6">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 6 de 7</span>
+    <span class="quem voce">Sua vez</span>
+    <h3>O momento de escolher</h3>
   </div>
 <p>O agente não pergunta “qual você prefere”. Ele abre a tabela com as duas colunas que quase ninguém olha: <strong>quantas casas assim você precisa</strong> e <strong>quantas existem no bairro</strong>.</p>
 
@@ -2001,13 +2064,11 @@ h4.sub{
     <p class="voice-note">E o Seu Reginaldo tem uma armadilha que não está na tabela: ele é o cliente que o Everton <strong>já via antes de perguntar qualquer coisa</strong>: o vizinho de sempre, saco de pão debaixo do braço, sete da manhã. É a imagem que vem junto com a palavra “padaria”. E não tem dor nenhuma.</p>
 </section>
 
-<section class="passo" id="p7">
-  <div class="passo-topo">
-    <div class="passo-n">07</div>
-    <div>
-      <div class="passo-fn">Passo 7</div>
-      <h3>O que ele devolve, e o que fica em aberto</h3>
-    </div>
+<section class="passo dele" id="p7">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 7 de 7</span>
+    <span class="quem ele">O especialista</span>
+    <h3>O que ele devolve, e o que fica em aberto</h3>
   </div>
 <div class="dl-peek">
       <div class="dl-peek-h">Cliente e Mercado · padaria do bairro · o documento que sai</div>
@@ -2042,8 +2103,9 @@ h4.sub{
       <p>Devolvo ao <strong>Diretor de Marca</strong>. Se você quiser fazer mais cinco ligações antes de seguir, essa é a hora.</p>
     </div>
 
-    <div class="principle-callout">
-      <p style="margin-bottom:0"><strong>A pendência não é decoração.</strong> A conta que elegeu a Cleide assume que ela para treze vezes por mês. Se a fricção dos quatro minutos não for vencida, o 136 é o número errado, e com ele cai o 7,3% que ganhou a escolha. Está escrito no documento, para a próxima camada receber como restrição e não como resolvido.</p>
+    <div class="aviso atencao">
+      <span class="aviso-t">A pendência não é decoração</span>
+      <p>A conta que elegeu a Cleide assume que ela para treze vezes por mês. Se a fricção dos quatro minutos não for vencida, o 136 é o número errado, e com ele cai o 7,3% que ganhou a escolha. Está escrito no documento, para a próxima camada receber como restrição e não como resolvido.</p>
     </div>
 
   <div class="cartao-passo">
