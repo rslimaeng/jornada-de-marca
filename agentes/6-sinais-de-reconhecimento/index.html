@@ -1402,6 +1402,20 @@ h4.sub{
 .passo.dele .context-col h4{
   padding-bottom:11px;margin-bottom:15px;border-bottom:1px solid var(--line);
 }
+
+/* ==================== REC-COL · sem a borda de 4px ====================
+   Sobraram tres blocos "Chame quando / Nao e aqui quando" em manual, mensagem
+   e sinais. Eles NAO viraram trio de proposito: sao as SITUACOES, e cortar de
+   seis para tres perderia o conteudo que o Rafael elogiou. Perdem so a borda
+   esquerda de 4px, que e o "grosseiro" que ele apontou e que o padrao de
+   treinamentos proibe: "nunca borda esquerda grossa colorida, ela desalinha o
+   texto do resto da coluna". O cabecalho colorido com filete carrega a mesma
+   distincao.                                                                */
+.rec-col.yes,
+.rec-col.no{border-left:1px solid var(--line)}
+.rec-col h4{
+  padding-bottom:12px;margin-bottom:18px;border-bottom:1px solid var(--line);
+}
 /* ==== FIM KIT ==== */
 </style></head>
 <body>
@@ -1698,14 +1712,12 @@ começando pelo que sai da loja</li>
 <div class="step-eyebrow">O passo a passo</div>
 <h2>A conversa inteira, <em>com o que reparar em cada turno</em>.</h2>
 
-<section class="passo" id="p1">
-<div class="passo-topo">
-<div class="passo-n">01</div>
-<div>
-<div class="passo-rot">Passo 1</div>
-<h3>O Everton chega decidido, e é a primeira vez</h3>
-</div>
-</div>
+<section class="passo sua" id="p1">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 1 de 7</span>
+    <span class="quem voce">Sua vez</span>
+    <h3>O Everton chega decidido, e é a primeira vez</h3>
+  </div>
 
 <p>Nas cinco camadas anteriores ele chegou com dúvida. Aqui ele chega com a decisão tomada, e por
 isso este é o turno mais difícil da jornada inteira.</p>
@@ -1727,14 +1739,12 @@ pessoa.</p>
 </div>
 </section>
 
-<section class="passo" id="p2">
-<div class="passo-topo">
-<div class="passo-n">02</div>
-<div>
-<div class="passo-rot">Passo 2</div>
-<h3>Ele pede uma foto, e não explica método nenhum</h3>
-</div>
-</div>
+<section class="passo dele" id="p2">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 2 de 7</span>
+    <span class="quem ele">O especialista</span>
+    <h3>Ele pede uma foto, e não explica método nenhum</h3>
+  </div>
 
 <div class="reply-box" data-advisor="Especialista em Sinais de Reconhecimento">
 <p><strong>Especialista em Sinais de Reconhecimento.</strong></p>
@@ -1758,14 +1768,12 @@ pergunta muda o assunto sem anunciar que mudou: em vez de <em>que cor combina co
 </div>
 </section>
 
-<section class="passo" id="p3">
-<div class="passo-topo">
-<div class="passo-n">03</div>
-<div>
-<div class="passo-rot">Passo 3</div>
-<h3>A contagem que ele não esperava, e o alívio que ela dá</h3>
-</div>
-</div>
+<section class="passo dele" id="p3">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 3 de 7</span>
+    <span class="quem ele">O especialista</span>
+    <h3>A contagem que ele não esperava, e o alívio que ela dá</h3>
+  </div>
 
 <div class="reply-box" data-advisor="Especialista em Sinais de Reconhecimento">
 <p>A sua lista veio com seis: café da manhã, lanche da tarde, jantar, café com visita que chegou,
@@ -1790,14 +1798,12 @@ e é a primeira vez que alguém coloca esse segundo preço na mesa.</p>
 </div>
 </section>
 
-<section class="passo" id="p4">
-<div class="passo-topo">
-<div class="passo-n">04</div>
-<div>
-<div class="passo-rot">Passo 4</div>
-<h3>As cores riscadas, e o marrom cai por conta própria</h3>
-</div>
-</div>
+<section class="passo dele" id="p4">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 4 de 7</span>
+    <span class="quem ele">O especialista</span>
+    <h3>As cores riscadas, e o marrom cai por conta própria</h3>
+  </div>
 
 <div class="reply-box" data-advisor="Especialista em Sinais de Reconhecimento">
 <p>Olhei as três fachadas. <strong>Nilton: marrom com bege. A segunda: marrom com vermelho. A
@@ -1844,14 +1850,12 @@ página, em vez de virar uma omissão silenciosa.</p>
 </div>
 </section>
 
-<section class="passo" id="p5">
-<div class="passo-topo">
-<div class="passo-n">05</div>
-<div>
-<div class="passo-rot">Passo 5</div>
-<h3>O martelo já existia, e estava na camada 3</h3>
-</div>
-</div>
+<section class="passo dele" id="p5">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 5 de 7</span>
+    <span class="quem ele">O especialista</span>
+    <h3>O martelo já existia, e estava na camada 3</h3>
+  </div>
 
 <div class="reply-box" data-advisor="Especialista em Sinais de Reconhecimento">
 <p>Agora o pão desenhado. <strong>Ele sai</strong>, e o teste é este: se eu tapar o nome e mostrar
@@ -1884,14 +1888,12 @@ Simples demais é o requisito, não o defeito.</p>
 </div>
 </section>
 
-<section class="passo" id="p6">
-<div class="passo-topo">
-<div class="passo-n">06</div>
-<div>
-<div class="passo-rot">Passo 6</div>
-<h3>A superfície mais barata já estava paga</h3>
-</div>
-</div>
+<section class="passo dele" id="p6">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 6 de 7</span>
+    <span class="quem ele">O especialista</span>
+    <h3>A superfície mais barata já estava paga</h3>
+  </div>
 
 <div class="reply-box" data-advisor="Especialista em Sinais de Reconhecimento">
 <p>Você tem cinco superfícies onde esse relógio vai aparecer, e todas já foram orçadas na camada 3.
@@ -1930,14 +1932,12 @@ conversas, e reprovaram temperamento que depende de talento. Aqui contam saídas
 </div>
 </section>
 
-<section class="passo" id="p7">
-<div class="passo-topo">
-<div class="passo-n">07</div>
-<div>
-<div class="passo-rot">Passo 7</div>
-<h3>O teste, e o que ele provou sobre o que já existia</h3>
-</div>
-</div>
+<section class="passo dele" id="p7">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 7 de 7</span>
+    <span class="quem ele">O especialista</span>
+    <h3>O teste, e o que ele provou sobre o que já existia</h3>
+  </div>
 
 <div class="reply-box" data-advisor="Especialista em Sinais de Reconhecimento">
 <p>Falta a única coisa que eu não faço por você, e ela é a mais importante.</p>
@@ -2127,31 +2127,27 @@ noite antes de aprovar qualquer coisa.</p></div>
 <div class="step-eyebrow">A cerca</div>
 <h2>O que este agente <em>não faz</em>, e diz antes.</h2>
 
-<div class="rec-grid">
-<div class="rec-col yes">
-<h4>Faz</h4>
-<ul>
-<li>conta em quantos momentos de compra o negócio consegue estar, e em quantos não</li>
-<li>risca as cores de quem você disputa e devolve o que sobrou, com o arquétipo desempatando</li>
-<li>decide o sinal primário e no máximo dois secundários</li>
-<li>procura o martelo dentro do mecanismo antes de propor qualquer imagem</li>
-<li>monta o teste do nome tapado e marca o que sair sem lastro</li>
-<li>lista as superfícies já pagas, soma o custo e devolve em dias de faturamento</li>
-</ul>
-</div>
-<div class="rec-col no">
-<h4>Não faz</h4>
-<ul>
-<li><strong>não desenha.</strong> Ele entrega decisões e especificações; quem executa a arte é um
-designer ou uma ferramenta</li>
-<li><strong>não escreve o manual.</strong> Tamanhos, margens e o que não pode são a camada 7</li>
-<li><strong>não escolhe fornecedor nem gráfica.</strong> É decisão de operação e de dinheiro</li>
-<li><strong>não compra mídia.</strong> Sinal se constrói por repetição no que a marca já toca</li>
-<li><strong>não promete crescimento.</strong> A régua da contagem é aritmética; promessa de
-resultado vem de dado de outra escala</li>
-</ul>
-</div>
-</div>
+<div class="contraste trio">
+      <div class="ctr faz"><span class="ctr-selo">Ele faz</span>
+        <h4>Risca as cores de quem você disputa</h4>
+        <p>E devolve o que sobrou, com o arquétipo desempatando. Decide o sinal primário e no máximo dois secundários.</p></div>
+      <div class="ctr faz"><span class="ctr-selo">Ele faz</span>
+        <h4>Procura o martelo no mecanismo</h4>
+        <p>Antes de propor qualquer imagem. E monta o teste do nome tapado, marcando o que sair sem lastro.</p></div>
+      <div class="ctr faz"><span class="ctr-selo">Ele faz</span>
+        <h4>Soma as superfícies já pagas</h4>
+        <p>E devolve o custo em dias de faturamento, com os momentos de compra contados.</p></div>
+      <div class="ctr nao"><span class="ctr-selo">Ele não faz</span>
+        <h4>Desenhar</h4>
+        <p>Entrega decisões e especificações. Quem executa a arte é um designer ou uma gráfica.</p></div>
+      <div class="ctr nao"><span class="ctr-selo">Ele não faz</span>
+        <h4>Escrever o manual</h4>
+        <p>Tamanhos, margens e o que não pode são a camada 7.</p></div>
+      <div class="ctr nao"><span class="ctr-selo">Ele não faz</span>
+        <h4>Comprar mídia ou prometer crescimento</h4>
+        <p>Sinal se constrói por repetição no que a marca já toca, e a régua da contagem é aritmética.</p></div>
+    </div>
+
 
 <div class="aviso atencao">
 <div class="aviso-t">De onde vem a evidência, e o que ela cobre</div>

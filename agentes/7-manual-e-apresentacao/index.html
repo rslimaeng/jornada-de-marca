@@ -1402,6 +1402,20 @@ h4.sub{
 .passo.dele .context-col h4{
   padding-bottom:11px;margin-bottom:15px;border-bottom:1px solid var(--line);
 }
+
+/* ==================== REC-COL · sem a borda de 4px ====================
+   Sobraram tres blocos "Chame quando / Nao e aqui quando" em manual, mensagem
+   e sinais. Eles NAO viraram trio de proposito: sao as SITUACOES, e cortar de
+   seis para tres perderia o conteudo que o Rafael elogiou. Perdem so a borda
+   esquerda de 4px, que e o "grosseiro" que ele apontou e que o padrao de
+   treinamentos proibe: "nunca borda esquerda grossa colorida, ela desalinha o
+   texto do resto da coluna". O cabecalho colorido com filete carrega a mesma
+   distincao.                                                                */
+.rec-col.yes,
+.rec-col.no{border-left:1px solid var(--line)}
+.rec-col h4{
+  padding-bottom:12px;margin-bottom:18px;border-bottom:1px solid var(--line);
+}
 /* ==== FIM KIT ==== */
 </style></head>
 <body>
@@ -1694,14 +1708,12 @@ deck vai ser feito</li>
 <div class="step-eyebrow">O passo a passo</div>
 <h2>A conversa inteira, <em>com o que reparar em cada turno</em>.</h2>
 
-<section class="passo" id="p1">
-<div class="passo-topo">
-<div class="passo-n">01</div>
-<div>
-<div class="passo-rot">Passo 1</div>
-<h3>O que o Everton pede é um formato, e não um resultado</h3>
-</div>
-</div>
+<section class="passo sua" id="p1">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 1 de 7</span>
+    <span class="quem voce">Sua vez</span>
+    <h3>O que o Everton pede é um formato, e não um resultado</h3>
+  </div>
 
 <p>Sexta camada concluída, e ele chega com uma referência na mão. É a última conversa da jornada, e
 o pedido dele é o mais concreto de todos.</p>
@@ -1722,14 +1734,12 @@ sozinha.</p>
 </div>
 </section>
 
-<section class="passo" id="p2">
-<div class="passo-topo">
-<div class="passo-n">02</div>
-<div>
-<div class="passo-rot">Passo 2</div>
-<h3>Ele pergunta por pessoas, e não pelo documento</h3>
-</div>
-</div>
+<section class="passo dele" id="p2">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 2 de 7</span>
+    <span class="quem ele">O especialista</span>
+    <h3>Ele pergunta por pessoas, e não pelo documento</h3>
+  </div>
 
 <div class="reply-box" data-advisor="Especialista em Manual e Apresentação">
 <p><strong>Especialista em Manual e Apresentação.</strong> Última camada, e é a mais rápida das
@@ -1754,14 +1764,12 @@ escreve. Ninguém inventa essas perguntas melhor do que quem já passou por elas
 </div>
 </section>
 
-<section class="passo" id="p3">
-<div class="passo-topo">
-<div class="passo-n">03</div>
-<div>
-<div class="passo-rot">Passo 3</div>
-<h3>O inventário, e a incoerência que ele revelou</h3>
-</div>
-</div>
+<section class="passo dele" id="p3">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 3 de 7</span>
+    <span class="quem ele">O especialista</span>
+    <h3>O inventário, e a incoerência que ele revelou</h3>
+  </div>
 
 <div class="reply-box" data-advisor="Especialista em Manual e Apresentação">
 <p>Listei tudo o que as seis camadas decidiram e que <strong>alguém pode executar errado</strong>.
@@ -1799,14 +1807,12 @@ lado a lado</strong>, o que só acontece no inventário.</p>
 </div>
 </section>
 
-<section class="passo" id="p4">
-<div class="passo-topo">
-<div class="passo-n">04</div>
-<div>
-<div class="passo-rot">Passo 4</div>
-<h3>Três pessoas, dois recortes, e o arquétipo que fica de fora</h3>
-</div>
-</div>
+<section class="passo dele" id="p4">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 4 de 7</span>
+    <span class="quem ele">O especialista</span>
+    <h3>Três pessoas, dois recortes, e o arquétipo que fica de fora</h3>
+  </div>
 
 <div class="reply-box" data-advisor="Especialista em Manual e Apresentação">
 <p>Você listou três pessoas: os dois do balcão e a gráfica. Marquei, decisão por decisão, o que cada
@@ -1838,14 +1844,12 @@ São operações diferentes, e a segunda é a que faz alguém achar em menos de 
 </div>
 </section>
 
-<section class="passo" id="p5">
-<div class="passo-topo">
-<div class="passo-n">05</div>
-<div>
-<div class="passo-rot">Passo 5</div>
-<h3>As perguntas vieram das pessoas, e não do agente</h3>
-</div>
-</div>
+<section class="passo dele" id="p5">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 5 de 7</span>
+    <span class="quem ele">O especialista</span>
+    <h3>As perguntas vieram das pessoas, e não do agente</h3>
+  </div>
 
 <div class="reply-box" data-advisor="Especialista em Manual e Apresentação">
 <p>Perguntei às três o que elas já não souberam responder. Saiu isto, com as palavras delas:</p>
@@ -1870,14 +1874,12 @@ escreve manual olha o logo na tela, ampliado.</p>
 </div>
 </section>
 
-<section class="passo" id="p6">
-<div class="passo-topo">
-<div class="passo-n">06</div>
-<div>
-<div class="passo-rot">Passo 6</div>
-<h3>O cronômetro, e a conta que fecha a camada</h3>
-</div>
-</div>
+<section class="passo dele" id="p6">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 6 de 7</span>
+    <span class="quem ele">O especialista</span>
+    <h3>O cronômetro, e a conta que fecha a camada</h3>
+  </div>
 
 <div class="reply-box" data-advisor="Especialista em Manual e Apresentação">
 <p>Falta a única parte que eu não faço por você. <strong>Entrega a folha do balcão para a sua
@@ -1917,14 +1919,12 @@ empurra para baixo as que alguém procura de verdade.</div>
 </div>
 </section>
 
-<section class="passo" id="p7">
-<div class="passo-topo">
-<div class="passo-n">07</div>
-<div>
-<div class="passo-rot">Passo 7</div>
-<h3>A apresentação, e para quem ela é</h3>
-</div>
-</div>
+<section class="passo dele" id="p7">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 7 de 7</span>
+    <span class="quem ele">O especialista</span>
+    <h3>A apresentação, e para quem ela é</h3>
+  </div>
 
 <div class="reply-box" data-advisor="Especialista em Manual e Apresentação">
 <p>Falta a apresentação. E a primeira pergunta não é o que vai dentro, é <strong>quem vai estar na
@@ -2115,32 +2115,27 @@ camada dona dela.</p></div>
 <div class="step-eyebrow">A cerca</div>
 <h2>O que este agente <em>não faz</em>, e diz antes.</h2>
 
-<div class="rec-grid">
-<div class="rec-col yes">
-<h4>Faz</h4>
-<ul>
-<li>inventaria toda decisão executável das camadas anteriores, com a origem de cada uma</li>
-<li>lista quem executa a marca sem ter estado em nenhuma conversa</li>
-<li>escreve um recorte por pessoa, só com o que ela usa</li>
-<li>organiza o manual pelas perguntas reais de quem vai consultar</li>
-<li>ordena os pontos de contato por primeiro encontro e por frequência</li>
-<li>monta a apresentação para o público que vai estar na sala</li>
-</ul>
-</div>
-<div class="rec-col no">
-<h4>Não faz</h4>
-<ul>
-<li><strong>não decide nada novo.</strong> É a única camada da jornada assim, e é o que a torna
-capaz de ver o conjunto</li>
-<li><strong>não resolve contradição entre camadas.</strong> Mostra, diz de quem é a decisão, e
-devolve</li>
-<li><strong>não desenha.</strong> Documenta o que a camada 6 decidiu</li>
-<li><strong>não completa lacuna com convenção.</strong> Decisão que ninguém tomou sai declarada como
-em aberto</li>
-<li><strong>não treina a equipe.</strong> Entrega os recortes; quem senta com as pessoas é você</li>
-</ul>
-</div>
-</div>
+<div class="contraste trio">
+      <div class="ctr faz"><span class="ctr-selo">Ele faz</span>
+        <h4>Inventaria toda decisão</h4>
+        <p>Toda decisão executável das camadas anteriores, com a camada de origem de cada uma.</p></div>
+      <div class="ctr faz"><span class="ctr-selo">Ele faz</span>
+        <h4>Faz um recorte por pessoa</h4>
+        <p>Lista quem executa a marca sem ter estado em nenhuma conversa, e escreve só o que cada uma usa.</p></div>
+      <div class="ctr faz"><span class="ctr-selo">Ele faz</span>
+        <h4>Monta o manual e a apresentação</h4>
+        <p>O manual organizado por pergunta, os pontos de contato por prioridade, e a apresentação numa versão por público.</p></div>
+      <div class="ctr nao"><span class="ctr-selo">Ele não faz</span>
+        <h4>Decidir nada novo</h4>
+        <p>É a única camada da jornada assim, e é o que a torna capaz de ver o conjunto.</p></div>
+      <div class="ctr nao"><span class="ctr-selo">Ele não faz</span>
+        <h4>Resolver contradição entre camadas</h4>
+        <p>Mostra, diz de quem é a decisão, e devolve. Lacuna que ninguém preencheu sai declarada como em aberto.</p></div>
+      <div class="ctr nao"><span class="ctr-selo">Ele não faz</span>
+        <h4>Desenhar ou treinar a equipe</h4>
+        <p>Documenta o que a camada 6 decidiu. Entrega os recortes, e quem senta com as pessoas é você.</p></div>
+    </div>
+
 
 <div class="aviso atencao">
 <div class="aviso-t">O vício de origem deste agente, e ele está declarado dentro da skill</div>

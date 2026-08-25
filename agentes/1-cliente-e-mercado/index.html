@@ -1402,6 +1402,20 @@ h4.sub{
 .passo.dele .context-col h4{
   padding-bottom:11px;margin-bottom:15px;border-bottom:1px solid var(--line);
 }
+
+/* ==================== REC-COL · sem a borda de 4px ====================
+   Sobraram tres blocos "Chame quando / Nao e aqui quando" em manual, mensagem
+   e sinais. Eles NAO viraram trio de proposito: sao as SITUACOES, e cortar de
+   seis para tres perderia o conteudo que o Rafael elogiou. Perdem so a borda
+   esquerda de 4px, que e o "grosseiro" que ele apontou e que o padrao de
+   treinamentos proibe: "nunca borda esquerda grossa colorida, ela desalinha o
+   texto do resto da coluna". O cabecalho colorido com filete carrega a mesma
+   distincao.                                                                */
+.rec-col.yes,
+.rec-col.no{border-left:1px solid var(--line)}
+.rec-col h4{
+  padding-bottom:12px;margin-bottom:18px;border-bottom:1px solid var(--line);
+}
 /* ==== FIM KIT ==== */
 </style>
 </head>

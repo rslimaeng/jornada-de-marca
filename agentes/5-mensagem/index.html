@@ -1402,6 +1402,20 @@ h4.sub{
 .passo.dele .context-col h4{
   padding-bottom:11px;margin-bottom:15px;border-bottom:1px solid var(--line);
 }
+
+/* ==================== REC-COL · sem a borda de 4px ====================
+   Sobraram tres blocos "Chame quando / Nao e aqui quando" em manual, mensagem
+   e sinais. Eles NAO viraram trio de proposito: sao as SITUACOES, e cortar de
+   seis para tres perderia o conteudo que o Rafael elogiou. Perdem so a borda
+   esquerda de 4px, que e o "grosseiro" que ele apontou e que o padrao de
+   treinamentos proibe: "nunca borda esquerda grossa colorida, ela desalinha o
+   texto do resto da coluna". O cabecalho colorido com filete carrega a mesma
+   distincao.                                                                */
+.rec-col.yes,
+.rec-col.no{border-left:1px solid var(--line)}
+.rec-col h4{
+  padding-bottom:12px;margin-bottom:18px;border-bottom:1px solid var(--line);
+}
 /* ==== FIM KIT ==== */
 </style></head>
 <body>
@@ -1698,14 +1712,12 @@ responde</li>
 <div class="step-eyebrow">O passo a passo</div>
 <h2>A conversa inteira, <em>com o que reparar em cada turno</em>.</h2>
 
-<section class="passo" id="p1">
-<div class="passo-topo">
-<div class="passo-n">01</div>
-<div>
-<div class="passo-rot">Passo 1</div>
-<h3>O que o Everton cola na conversa</h3>
-</div>
-</div>
+<section class="passo sua" id="p1">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 1 de 7</span>
+    <span class="quem voce">Sua vez</span>
+    <h3>O que o Everton cola na conversa</h3>
+  </div>
 
 <p>Ele vem de quatro camadas, com o trabalho feito, e traz uma frase que escreveu numa noite. Ela
 tem <strong>36 palavras</strong> e está gramaticalmente perfeita.</p>
@@ -1725,14 +1737,12 @@ forma mais rápida de entregar o defeito menor.</p>
 </div>
 </section>
 
-<section class="passo" id="p2">
-<div class="passo-topo">
-<div class="passo-n">02</div>
-<div>
-<div class="passo-rot">Passo 2</div>
-<h3>Ele não explica o método, e pede o que já existe</h3>
-</div>
-</div>
+<section class="passo dele" id="p2">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 2 de 7</span>
+    <span class="quem ele">O especialista</span>
+    <h3>Ele não explica o método, e pede o que já existe</h3>
+  </div>
 
 <div class="reply-box" data-advisor="Especialista em Mensagem">
 <p><strong>Especialista em Mensagem.</strong></p>
@@ -1757,14 +1767,12 @@ reformulada em algo que se responde de cabeça, e <strong>reformular vale uma ve
 </div>
 </section>
 
-<section class="passo" id="p3">
-<div class="passo-topo">
-<div class="passo-n">03</div>
-<div>
-<div class="passo-rot">Passo 3</div>
-<h3>O diagnóstico cabe numa pergunta sobre gramática</h3>
-</div>
-</div>
+<section class="passo dele" id="p3">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 3 de 7</span>
+    <span class="quem ele">O especialista</span>
+    <h3>O diagnóstico cabe numa pergunta sobre gramática</h3>
+  </div>
 
 <div class="reply-box" data-advisor="Especialista em Mensagem">
 <p>Olha as duas juntas. Em cima o que você escreveu, embaixo o que você me falou agora:</p>
@@ -1787,14 +1795,12 @@ frase, que ele nunca tinha dito em voz alta, virou o segundo bloco do site.</p>
 </div>
 </section>
 
-<section class="passo" id="p4">
-<div class="passo-topo">
-<div class="passo-n">04</div>
-<div>
-<div class="passo-rot">Passo 4</div>
-<h3>O vilão, e por que não é o Seu Nilton</h3>
-</div>
-</div>
+<section class="passo dele" id="p4">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 4 de 7</span>
+    <span class="quem ele">O especialista</span>
+    <h3>O vilão, e por que não é o Seu Nilton</h3>
+  </div>
 
 <div class="reply-box" data-advisor="Especialista em Mensagem">
 <p>Você me falou do Nilton três vezes. Ele não entra no texto, e o motivo é prático:
@@ -1816,14 +1822,12 @@ refazê-las. Repetir a coleta é fazer a pessoa pagar duas vezes pelo mesmo trab
 </div>
 </section>
 
-<section class="passo" id="p5">
-<div class="passo-topo">
-<div class="passo-n">05</div>
-<div>
-<div class="passo-rot">Passo 5</div>
-<h3>A frase, e a ordem de não validá-la sozinho</h3>
-</div>
-</div>
+<section class="passo dele" id="p5">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 5 de 7</span>
+    <span class="quem ele">O especialista</span>
+    <h3>A frase, e a ordem de não validá-la sozinho</h3>
+  </div>
 
 <div class="reply-box" data-advisor="Especialista em Mensagem">
 <p>A sua frase, com as palavras deles:</p>
@@ -1867,14 +1871,12 @@ briga sobre a palavra favorita do dono.</p>
 </div>
 </section>
 
-<section class="passo" id="p6">
-<div class="passo-topo">
-<div class="passo-n">06</div>
-<div>
-<div class="passo-rot">Passo 6</div>
-<h3>A pergunta que ele nunca tinha feito</h3>
-</div>
-</div>
+<section class="passo dele" id="p6">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 6 de 7</span>
+    <span class="quem ele">O especialista</span>
+    <h3>A pergunta que ele nunca tinha feito</h3>
+  </div>
 
 <div class="reply-box" data-advisor="Especialista em Mensagem">
 <p>A frase está pronta. Antes de você encomendar a fachada, uma pergunta:</p>
@@ -1928,14 +1930,12 @@ operação e de dinheiro, e não é dele.</p>
 </div>
 </section>
 
-<section class="passo" id="p7">
-<div class="passo-topo">
-<div class="passo-n">07</div>
-<div>
-<div class="passo-rot">Passo 7</div>
-<h3>Sete mensagens, escritas uma vez</h3>
-</div>
-</div>
+<section class="passo dele" id="p7">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 7 de 7</span>
+    <span class="quem ele">O especialista</span>
+    <h3>Sete mensagens, escritas uma vez</h3>
+  </div>
 
 <div class="reply-box" data-advisor="Especialista em Mensagem">
 <p>Antes de escrever qualquer uma: <strong>quantas mensagens por mês você consegue manter, e quem
@@ -2136,32 +2136,27 @@ equilíbrio. Na padaria, 0,48% da meta do mês.</p></div>
 <div class="step-eyebrow">A cerca</div>
 <h2>O que este agente <em>não faz</em>, e diz antes.</h2>
 
-<div class="rec-grid">
-<div class="rec-col yes">
-<h4>Faz</h4>
-<ul>
-<li>diagnostica quem está ocupando o lugar de herói no seu texto de hoje</li>
-<li>preenche os sete elementos e escreve a frase única, com as palavras dos seus clientes</li>
-<li>manda testar a frase com gente de fora, e marca o que não voltou</li>
-<li>reescreve o topo do site na ordem em que a pessoa precisa das informações</li>
-<li>desenha o caminho até a compra em quatro passos, com o que precisa existir em cada um</li>
-<li>escreve a isca e as sete mensagens, na voz da camada 4</li>
-</ul>
-</div>
-<div class="rec-col no">
-<h4>Não faz</h4>
-<ul>
-<li><strong>não compra mídia e não escreve anúncio.</strong> Nem sugere verba</li>
-<li><strong>não escolhe ferramenta.</strong> Nem de e-mail, nem de site, nem de automação. É decisão
-de operação e de dinheiro</li>
-<li><strong>não opera nada.</strong> Ele entrega o texto e o desenho; quem manda, agenda e responde
-é você</li>
-<li><strong>não promete conversão.</strong> Promete clareza e caminho, e o resto depende de oferta,
-preço e execução</li>
-<li><strong>não escolhe cor, forma nem símbolo.</strong> São as camadas 6 e 7</li>
-</ul>
-</div>
-</div>
+<div class="contraste trio">
+      <div class="ctr faz"><span class="ctr-selo">Ele faz</span>
+        <h4>Diagnostica quem é o herói</h4>
+        <p>Quem está ocupando esse lugar no seu texto de hoje, e por que quase sempre é a empresa.</p></div>
+      <div class="ctr faz"><span class="ctr-selo">Ele faz</span>
+        <h4>Escreve a frase única</h4>
+        <p>Com as palavras dos seus clientes, e manda testar com gente de fora antes de você usar.</p></div>
+      <div class="ctr faz"><span class="ctr-selo">Ele faz</span>
+        <h4>Desenha o caminho até a compra</h4>
+        <p>Quatro passos, a isca e as sete mensagens, escritas na voz da camada 4.</p></div>
+      <div class="ctr nao"><span class="ctr-selo">Ele não faz</span>
+        <h4>Comprar mídia ou escrever anúncio</h4>
+        <p>Nem sugere verba.</p></div>
+      <div class="ctr nao"><span class="ctr-selo">Ele não faz</span>
+        <h4>Escolher ferramenta</h4>
+        <p>Nem de e-mail, nem de site, nem de automação. É decisão de operação e de dinheiro.</p></div>
+      <div class="ctr nao"><span class="ctr-selo">Ele não faz</span>
+        <h4>Prometer conversão</h4>
+        <p>Promete clareza e caminho. O resto depende de oferta, preço e execução.</p></div>
+    </div>
+
 
 <div class="aviso atencao">
 <div class="aviso-t">A fronteira que ficou mais estreita, e vale dizer por quê</div>

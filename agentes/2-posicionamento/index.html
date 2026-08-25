@@ -1402,6 +1402,20 @@ h4.sub{
 .passo.dele .context-col h4{
   padding-bottom:11px;margin-bottom:15px;border-bottom:1px solid var(--line);
 }
+
+/* ==================== REC-COL · sem a borda de 4px ====================
+   Sobraram tres blocos "Chame quando / Nao e aqui quando" em manual, mensagem
+   e sinais. Eles NAO viraram trio de proposito: sao as SITUACOES, e cortar de
+   seis para tres perderia o conteudo que o Rafael elogiou. Perdem so a borda
+   esquerda de 4px, que e o "grosseiro" que ele apontou e que o padrao de
+   treinamentos proibe: "nunca borda esquerda grossa colorida, ela desalinha o
+   texto do resto da coluna". O cabecalho colorido com filete carrega a mesma
+   distincao.                                                                */
+.rec-col.yes,
+.rec-col.no{border-left:1px solid var(--line)}
+.rec-col h4{
+  padding-bottom:12px;margin-bottom:18px;border-bottom:1px solid var(--line);
+}
 /* ==== FIM KIT ==== */
 </style>
 </head>
@@ -1469,31 +1483,27 @@ h4.sub{
     <div class="step-eyebrow">Quem é este especialista</div>
     <h2>Ele faz você <em>perder coisa de propósito</em>, e mostra a conta.</h2>
 
-    <div class="rec-grid">
-      <div class="rec-col yes">
-        <h4>Ele faz</h4>
-        <ul>
-          <li>levanta três posições possíveis, nunca uma</li>
-          <li>apura o custo, a margem e a meta de cada uma</li>
-          <li>calcula quantos compradores cada posição exige</li>
-          <li>escreve o que se sacrifica, com nome e com valor por mês</li>
-          <li>deixa registrado o motivo, para o dia da tentação de reabrir</li>
-        </ul>
-      </div>
-      <div class="rec-col no">
-        <h4>Ele recusa</h4>
-        <ul>
-          <li>descobrir quem é o cliente: é a camada 1, e ele não a refaz</li>
-          <li>escolher o nome: é a camada 3, Diferença e Nome</li>
-          <li>definir arquétipo ou tom de voz: é a camada 4</li>
-          <li>escrever headline ou texto de site: é a camada 5</li>
-          <li>falar de cor, tipografia ou logo: são as camadas 6 e 7</li>
-        </ul>
-        <p style="margin-top:14px"><strong>A recusa mais importante é a primeira.</strong>
-        Quem chega aqui sem saber para quem vende quer que esta camada resolva a anterior,
-        e o que sai é uma posição no vazio.</p>
-      </div>
+    <div class="contraste trio">
+      <div class="ctr faz"><span class="ctr-selo">Ele faz</span>
+        <h4>Levanta três posições</h4>
+        <p>Nunca uma. E apura o custo, a margem e a meta de cada uma.</p></div>
+      <div class="ctr faz"><span class="ctr-selo">Ele faz</span>
+        <h4>Calcula quantos compradores</h4>
+        <p>Quantos cada posição exige por mês, contra quantos existem na região.</p></div>
+      <div class="ctr faz"><span class="ctr-selo">Ele faz</span>
+        <h4>Escreve o que se sacrifica</h4>
+        <p>Com nome e com valor por mês, e o motivo registrado para o dia da tentação de reabrir.</p></div>
+      <div class="ctr nao"><span class="ctr-selo">Ele recusa</span>
+        <h4>Descobrir quem é o cliente</h4>
+        <p>É a camada 1, e ele não a refaz. É a recusa mais importante: quem chega sem saber para quem vende quer que esta camada adivinhe.</p></div>
+      <div class="ctr nao"><span class="ctr-selo">Ele recusa</span>
+        <h4>Escolher o nome</h4>
+        <p>É a camada 3, Diferença e Nome.</p></div>
+      <div class="ctr nao"><span class="ctr-selo">Ele recusa</span>
+        <h4>Definir tom, texto, cor ou logo</h4>
+        <p>São as camadas 4, 5, 6 e 7, nessa ordem.</p></div>
     </div>
+
 
     <h3 class="sub">O que você recebe no fim</h3>
 
@@ -1512,83 +1522,28 @@ h4.sub{
       </div>
     </div>
 
-        <div class="diagram" style="margin-top:28px">
-      <div class="diagram-head">A JORNADA DE MARCA · 7 CAMADAS</div>
-      <div class="diagram-title">Cada camada recebe o artefato da anterior. Esta recebe a primeira.</div>
-      <div class="diagram-scroll">
-        <svg viewBox="0 0 1008 168" role="img" aria-labelledby="jornada-title jornada-desc">
-          <title id="jornada-title">As sete camadas da Jornada de Marca</title>
-          <desc id="jornada-desc">Sequência de sete camadas em ordem, da primeira à sétima: Cliente e Mercado, Posicionamento, Diferença e Nome, Personalidade e Voz, Mensagem, Sinais de Reconhecimento, e Manual e Apresentação. A primeira está destacada porque é a camada desta página, e cada camada entrega o resultado para a seguinte.</desc>
+        <p class="frase-mapa"><strong>Em uma frase:</strong> você entra dizendo o que vende, e sai com uma
+    marca inteira. No caminho são sete decisões, e <strong>cada uma usa o que a anterior escreveu</strong>:
+    quem compra, onde a marca se planta, a frase que só ela pode dizer, o jeito de falar, a mensagem,
+    os sinais que fazem reconhecer, e o manual que faz alguém de fora executar. Escolher onde se plantar
+    antes de saber quem compra é escolher a esquina antes de saber quem passa nela.
+    <strong>Esta é a segunda, e ela recebe a primeira pronta.</strong></p>
 
-          <rect width="100%" height="100%" fill="var(--paper-3)"/>
-
-          <defs>
-            <marker id="jr-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-              <polygon points="0 0, 8 3, 0 6" fill="var(--ink-3)"/>
-            </marker>
-          </defs>
-
-          <!-- setas primeiro, para ficarem atras das caixas -->
-          <line x1="144" y1="88" x2="162" y2="88" stroke="var(--ink-3)" stroke-width="1" marker-end="url(#jr-arrow)"/>
-          <line x1="284" y1="88" x2="302" y2="88" stroke="var(--ink-3)" stroke-width="1" marker-end="url(#jr-arrow)"/>
-          <line x1="424" y1="88" x2="442" y2="88" stroke="var(--ink-3)" stroke-width="1" marker-end="url(#jr-arrow)"/>
-          <line x1="564" y1="88" x2="582" y2="88" stroke="var(--ink-3)" stroke-width="1" marker-end="url(#jr-arrow)"/>
-          <line x1="704" y1="88" x2="722" y2="88" stroke="var(--ink-3)" stroke-width="1" marker-end="url(#jr-arrow)"/>
-          <line x1="844" y1="88" x2="862" y2="88" stroke="var(--ink-3)" stroke-width="1" marker-end="url(#jr-arrow)"/>
-
-          <!-- 1 · concluida -->
-          <text x="84" y="36" class="d-lbl" text-anchor="middle">JÁ FEITA</text>
-          <rect x="24" y="48" width="120" height="80" rx="2" fill="var(--white)" stroke="var(--line)" stroke-width="1"/>
-          <rect x="32" y="56" width="28" height="16" rx="2" fill="none" stroke="var(--line)" stroke-width="0.8"/>
-          <text x="46" y="68" class="d-lbl" text-anchor="middle">01</text>
-          <text x="84" y="96" class="d-cap" text-anchor="middle">Cliente e</text>
-          <text x="84" y="114" class="d-cap" text-anchor="middle">Mercado</text>
-
-          <!-- 2 · focal -->
-          <text x="224" y="36" class="d-lbl" style="fill:var(--terra)" text-anchor="middle">VOCÊ ESTÁ AQUI</text>
-          <rect x="164" y="48" width="120" height="80" rx="2" fill="var(--terra-bg)" stroke="var(--terra)" stroke-width="1.2"/>
-          <rect x="172" y="56" width="28" height="16" rx="2" fill="none" stroke="var(--terra)" stroke-width="0.8" opacity="0.5"/>
-          <text x="186" y="68" class="d-lbl" style="fill:var(--terra)" text-anchor="middle">02</text>
-          <text x="224" y="104" class="d-cap-b" text-anchor="middle">Posicionamento</text>
-
-          <!-- 3 -->
-          <rect x="304" y="48" width="120" height="80" rx="2" fill="var(--white)" stroke="var(--line)" stroke-width="1"/>
-          <rect x="312" y="56" width="28" height="16" rx="2" fill="none" stroke="var(--line)" stroke-width="0.8"/>
-          <text x="326" y="68" class="d-lbl" text-anchor="middle">03</text>
-          <text x="364" y="96" class="d-cap" text-anchor="middle">Diferença</text>
-          <text x="364" y="114" class="d-cap" text-anchor="middle">e Nome</text>
-
-          <!-- 4 -->
-          <rect x="444" y="48" width="120" height="80" rx="2" fill="var(--white)" stroke="var(--line)" stroke-width="1"/>
-          <rect x="452" y="56" width="28" height="16" rx="2" fill="none" stroke="var(--line)" stroke-width="0.8"/>
-          <text x="466" y="68" class="d-lbl" text-anchor="middle">04</text>
-          <text x="504" y="96" class="d-cap" text-anchor="middle">Personalidade</text>
-          <text x="504" y="114" class="d-cap" text-anchor="middle">e Voz</text>
-
-          <!-- 5 -->
-          <rect x="584" y="48" width="120" height="80" rx="2" fill="var(--white)" stroke="var(--line)" stroke-width="1"/>
-          <rect x="592" y="56" width="28" height="16" rx="2" fill="none" stroke="var(--line)" stroke-width="0.8"/>
-          <text x="606" y="68" class="d-lbl" text-anchor="middle">05</text>
-          <text x="644" y="104" class="d-cap" text-anchor="middle">Mensagem</text>
-
-          <!-- 6 -->
-          <rect x="724" y="48" width="120" height="80" rx="2" fill="var(--white)" stroke="var(--line)" stroke-width="1"/>
-          <rect x="732" y="56" width="28" height="16" rx="2" fill="none" stroke="var(--line)" stroke-width="0.8"/>
-          <text x="746" y="68" class="d-lbl" text-anchor="middle">06</text>
-          <text x="784" y="96" class="d-cap" text-anchor="middle">Sinais de</text>
-          <text x="784" y="114" class="d-cap" text-anchor="middle">Reconhecimento</text>
-
-          <!-- 7 -->
-          <rect x="864" y="48" width="120" height="80" rx="2" fill="var(--white)" stroke="var(--line)" stroke-width="1"/>
-          <rect x="872" y="56" width="28" height="16" rx="2" fill="none" stroke="var(--line)" stroke-width="0.8"/>
-          <text x="886" y="68" class="d-lbl" text-anchor="middle">07</text>
-          <text x="924" y="96" class="d-cap" text-anchor="middle">Manual</text>
-          <text x="924" y="114" class="d-cap" text-anchor="middle">e Deck</text>
-        </svg>
-      </div>
-      <div class="diagram-note">A ordem não é preferência: cada camada usa o que a anterior escreveu. Decidir o nome antes de saber quem compra é escolher a fachada antes de saber quem passa na rua. ✅ <strong>As sete camadas da jornada existem</strong>: as duas condicionais, no fim do diagrama, só entram em negócio com mais de uma linha de produto ou com time montado.</div>
+    <div class="cadeia">
+      <span class="cad-no">01 · Cliente e Mercado</span>
+      <span class="cad-elo"><span class="cad-seta">&rarr;</span><span class="cad-no cad-aqui">02 · Posicionamento</span></span>
+      <span class="cad-elo"><span class="cad-seta">&rarr;</span><span class="cad-no">03 · Diferença e Nome</span></span>
+      <span class="cad-elo"><span class="cad-seta">&rarr;</span><span class="cad-no">04 · Personalidade e Voz</span></span>
+      <span class="cad-elo"><span class="cad-seta">&rarr;</span><span class="cad-no">05 · Mensagem</span></span>
+      <span class="cad-elo"><span class="cad-seta">&rarr;</span><span class="cad-no">06 · Sinais de Reconhecimento</span></span>
+      <span class="cad-elo"><span class="cad-seta">&rarr;</span><span class="cad-no">07 · Manual e Apresentação</span></span>
     </div>
-  </div>
+    <div class="cadeia cond-linha">
+      <span class="cond-rot">fora da ordem, e só se o negócio pedir</span>
+      <span class="cad-no cad-cond">Arquitetura de Marca</span>
+      <span class="cad-no cad-cond">Marca na Operação</span>
+    </div>
+
 </section>
 <section class="step" id="conceito">
   <div class="container">
@@ -1886,12 +1841,22 @@ h4.sub{
       <span class="dl-tab">4 · O sacrifício</span>
     </div>
 
-    <div class="dl-peek">
-      <div class="dl-peek-h">Aba 2 · o que está em branco é o exercício inteiro</div>
-      <div class="dl-peek-b">Posição · Custo fixo · Insumo · <strong>Margem</strong> · <strong>Meta</strong> · <strong>Compradores</strong> · <strong>Público</strong> · <strong>Fatia</strong><br>
-      Faz tudo · R$ 18.000 · 41% · ⟨ ⟩ · ⟨ ⟩ · ⟨ ⟩ · ⟨ ⟩ · ⟨ ⟩<br>
-      Só de tarde · R$ 14.600 · 36% · ⟨ ⟩ · ⟨ ⟩ · ⟨ ⟩ · ⟨ ⟩ · ⟨ ⟩<br>
-      Só natural · R$ 14.600 · 31% · ⟨ ⟩ · ⟨ ⟩ · ⟨ ⟩ · ⟨ ⟩ · ⟨ ⟩</div>
+    <div class="table-scroll planilha">
+      <table>
+        <thead><tr>
+          <th>Posição</th><th>Custo fixo</th><th>Insumo</th>
+          <th class="sua">Margem</th><th class="sua">Meta</th><th class="sua">Compradores</th>
+          <th class="sua">Público</th><th class="sua">Fatia</th>
+        </tr></thead>
+        <tbody>
+          <tr><td class="nome">Faz tudo</td><td class="num">R$ 18.000</td><td class="num">41%</td>
+              <td class="lacuna"></td><td class="lacuna"></td><td class="lacuna"></td><td class="lacuna"></td><td class="lacuna"></td></tr>
+          <tr><td class="nome">Só de tarde</td><td class="num">R$ 14.600</td><td class="num">36%</td>
+              <td class="lacuna"></td><td class="lacuna"></td><td class="lacuna"></td><td class="lacuna"></td><td class="lacuna"></td></tr>
+          <tr><td class="nome">Só natural</td><td class="num">R$ 14.600</td><td class="num">31%</td>
+              <td class="lacuna"></td><td class="lacuna"></td><td class="lacuna"></td><td class="lacuna"></td><td class="lacuna"></td></tr>
+        </tbody>
+      </table>
     </div>
     <p class="diagram-note">A coluna <strong>Público</strong> é a que quase todo mundo preenche errado, e ela decide a última. Cada posição alcança um público diferente: quem abre só à tarde não alcança quem compra de manhã, e dividir pelo bairro inteiro faz a posição parecer mais fácil do que é.</p>
   </div>
@@ -1904,13 +1869,11 @@ h4.sub{
     dizendo o que reparar, porque o que importa aqui quase nunca é a resposta: é o que ela recusa fazer.</p>
   </div>
 
-<section class="passo" id="p1">
-  <div class="passo-topo">
-    <div class="passo-n">01</div>
-    <div>
-      <div class="passo-fn">Passo 1</div>
-      <h3>O que você cola na conversa</h3>
-    </div>
+<section class="passo sua" id="p1">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 1 de 7</span>
+    <span class="quem voce">Sua vez</span>
+    <h3>O que você cola na conversa</h3>
   </div>
 
   <p>Everton já passou pela camada 1. Tem a persona, tem a conta, tem as falas. E chega aqui pedindo
@@ -1930,13 +1893,11 @@ h4.sub{
   </div>
 </section>
 
-<section class="passo" id="p2">
-  <div class="passo-topo">
-    <div class="passo-n">02</div>
-    <div>
-      <div class="passo-fn">Passo 2</div>
-      <h3>Ele repete o que recebeu, e recusa o atalho</h3>
-    </div>
+<section class="passo dele" id="p2">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 2 de 7</span>
+    <span class="quem ele">O especialista</span>
+    <h3>Ele repete o que recebeu, e recusa o atalho</h3>
   </div>
 
   <div class="reply-box" data-advisor="Especialista em Posicionamento">
@@ -1961,13 +1922,11 @@ h4.sub{
   </div>
 </section>
 
-<section class="passo" id="p3">
-  <div class="passo-topo">
-    <div class="passo-n">03</div>
-    <div>
-      <div class="passo-fn">Passo 3</div>
-      <h3>Ele nomeia o dono do lugar</h3>
-    </div>
+<section class="passo dele" id="p3">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 3 de 7</span>
+    <span class="quem ele">O especialista</span>
+    <h3>Ele nomeia o dono do lugar</h3>
   </div>
 
   <p>Everton responde que não recusaria nada, porque ainda não abriu, e que precisa de toda venda que
@@ -2000,13 +1959,11 @@ h4.sub{
   </div>
 </section>
 
-<section class="passo" id="p4">
-  <div class="passo-topo">
-    <div class="passo-n">04</div>
-    <div>
-      <div class="passo-fn">Passo 4</div>
-      <h3>Ele levanta três posições, nunca uma</h3>
-    </div>
+<section class="passo dele" id="p4">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 4 de 7</span>
+    <span class="quem ele">O especialista</span>
+    <h3>Ele levanta três posições, nunca uma</h3>
   </div>
 
   <p>Uma proposta única não é escolha, é recomendação disfarçada. O especialista levanta sempre três:
@@ -2058,13 +2015,11 @@ h4.sub{
   </div>
 </section>
 
-<section class="passo" id="p5">
-  <div class="passo-topo">
-    <div class="passo-n">05</div>
-    <div>
-      <div class="passo-fn">Passo 5</div>
-      <h3>Ele apura as cinco linhas de cada uma</h3>
-    </div>
+<section class="passo dele" id="p5">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 5 de 7</span>
+    <span class="quem ele">O especialista</span>
+    <h3>Ele apura as cinco linhas de cada uma</h3>
   </div>
 
   <p>É aqui que posicionamento deixa de ser conversa de marca e vira conta de operação. Cada posição
@@ -2103,13 +2058,11 @@ h4.sub{
   </div>
 </section>
 
-<section class="passo" id="p6">
-  <div class="passo-topo">
-    <div class="passo-n">06</div>
-    <div>
-      <div class="passo-fn">Passo 6</div>
-      <h3>Ele roda a mesma rampa nas três</h3>
-    </div>
+<section class="passo dele" id="p6">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 6 de 7</span>
+    <span class="quem ele">O especialista</span>
+    <h3>Ele roda a mesma rampa nas três</h3>
   </div>
 
   <p>A tabela do passo anterior mostra o destino. Esta mostra o caminho, que é onde a estrutura de custo
@@ -2151,13 +2104,11 @@ h4.sub{
   </div>
 </section>
 
-<section class="passo" id="p7">
-  <div class="passo-topo">
-    <div class="passo-n">07</div>
-    <div>
-      <div class="passo-fn">Passo 7</div>
-      <h3>Ele escreve quem se perde, e quanto isso vale</h3>
-    </div>
+<section class="passo dele" id="p7">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 7 de 7</span>
+    <span class="quem ele">O especialista</span>
+    <h3>Ele escreve quem se perde, e quanto isso vale</h3>
   </div>
 
   <p>A posição B fica de pé. Falta a parte que quase nunca é escrita, e que é o produto desta camada.</p>

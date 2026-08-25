@@ -1402,6 +1402,20 @@ h4.sub{
 .passo.dele .context-col h4{
   padding-bottom:11px;margin-bottom:15px;border-bottom:1px solid var(--line);
 }
+
+/* ==================== REC-COL · sem a borda de 4px ====================
+   Sobraram tres blocos "Chame quando / Nao e aqui quando" em manual, mensagem
+   e sinais. Eles NAO viraram trio de proposito: sao as SITUACOES, e cortar de
+   seis para tres perderia o conteudo que o Rafael elogiou. Perdem so a borda
+   esquerda de 4px, que e o "grosseiro" que ele apontou e que o padrao de
+   treinamentos proibe: "nunca borda esquerda grossa colorida, ela desalinha o
+   texto do resto da coluna". O cabecalho colorido com filete carrega a mesma
+   distincao.                                                                */
+.rec-col.yes,
+.rec-col.no{border-left:1px solid var(--line)}
+.rec-col h4{
+  padding-bottom:12px;margin-bottom:18px;border-bottom:1px solid var(--line);
+}
 /* ==== FIM KIT ==== */
 </style></head>
 <body>
@@ -1710,14 +1724,12 @@ quantos dos cinco a disseram</li>
 <div class="step-eyebrow">O passo a passo</div>
 <h2>A conversa inteira, <em>com o que reparar em cada turno</em>.</h2>
 
-<section class="passo" id="p1">
-<div class="passo-topo">
-<div class="passo-n">01</div>
-<div>
-<div class="passo-rot">Passo 1</div>
-<h3>O que o Everton cola na conversa</h3>
-</div>
-</div>
+<section class="passo sua" id="p1">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 1 de 7</span>
+    <span class="quem voce">Sua vez</span>
+    <h3>O que o Everton cola na conversa</h3>
+  </div>
 
 <p>Ele vem de três camadas, com o trabalho feito, e traz três defeitos numa mensagem só. Nenhum
 deles parece defeito ao escrever.</p>
@@ -1737,14 +1749,12 @@ nenhum cliente do bairro usou</strong>, o que a camada 1 já tinha registrado e 
 </div>
 </section>
 
-<section class="passo" id="p2">
-<div class="passo-topo">
-<div class="passo-n">02</div>
-<div>
-<div class="passo-rot">Passo 2</div>
-<h3>Ele confirma o que recebeu, e não começa por personalidade</h3>
-</div>
-</div>
+<section class="passo dele" id="p2">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 2 de 7</span>
+    <span class="quem ele">O especialista</span>
+    <h3>Ele confirma o que recebeu, e não começa por personalidade</h3>
+  </div>
 
 <div class="reply-box" data-advisor="Especialista em Personalidade e Voz">
 <p><strong>Especialista em Personalidade e Voz.</strong></p>
@@ -1769,14 +1779,12 @@ por critério nenhum.</p>
 </div>
 </section>
 
-<section class="passo" id="p3">
-<div class="passo-topo">
-<div class="passo-n">03</div>
-<div>
-<div class="passo-rot">Passo 3</div>
-<h3>A conta que vira a chave</h3>
-</div>
-</div>
+<section class="passo dele" id="p3">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 3 de 7</span>
+    <span class="quem ele">O especialista</span>
+    <h3>A conta que vira a chave</h3>
+  </div>
 
 <div class="reply-box" data-advisor="Especialista em Personalidade e Voz">
 <p>São <strong>78 atendimentos por dia</strong>, em 26 dias de operação. Isso dá
@@ -1801,14 +1809,12 @@ balcão às seis da tarde.</p>
 </div>
 </section>
 
-<section class="passo" id="p4">
-<div class="passo-topo">
-<div class="passo-n">04</div>
-<div>
-<div class="passo-rot">Passo 4</div>
-<h3>O trabalho que ele manda você fazer</h3>
-</div>
-</div>
+<section class="passo sua" id="p4">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 4 de 7</span>
+    <span class="quem voce">Sua vez</span>
+    <h3>O trabalho que ele manda você fazer</h3>
+  </div>
 
 <div class="reply-box" data-advisor="Especialista em Personalidade e Voz">
 <p>Antes de eu escrever qualquer coisa, quero uma frase sua, escrita agora, sem pensar muito:</p>
@@ -1828,14 +1834,12 @@ fim: personalidade de marca soa como assunto de dono, e quem executa são elas.<
 </div>
 </section>
 
-<section class="passo" id="p5">
-<div class="passo-topo">
-<div class="passo-n">05</div>
-<div>
-<div class="passo-rot">Passo 5</div>
-<h3>O que ele abre na tela</h3>
-</div>
-</div>
+<section class="passo dele" id="p5">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 5 de 7</span>
+    <span class="quem ele">O especialista</span>
+    <h3>O que ele abre na tela</h3>
+  </div>
 
 <p>O Everton respondeu: <em>“Desculpa, a gente infelizmente só abre às 11h, não trabalhamos de
 manhã.”</em> O agente não comenta a frase ainda. Primeiro ele risca um candidato e apura os
@@ -1880,14 +1884,12 @@ lados</strong>, e é por isso que temperamento não se escolhe por gosto.</p>
 </div>
 </section>
 
-<section class="passo" id="p6">
-<div class="passo-topo">
-<div class="passo-n">06</div>
-<div>
-<div class="passo-rot">Passo 6</div>
-<h3>O momento de escolher, e a frase que ele escreveu no passo 4</h3>
-</div>
-</div>
+<section class="passo sua" id="p6">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 6 de 7</span>
+    <span class="quem voce">Sua vez</span>
+    <h3>O momento de escolher, e a frase que ele escreveu no passo 4</h3>
+  </div>
 
 <div class="reply-box" data-advisor="Especialista em Personalidade e Voz">
 <p>Recomendo <strong>o artesão</strong>, e a razão é a última coluna: ele é o único que depende de
@@ -1932,14 +1934,12 @@ ditos</strong>, e é isso que separa orgulho de desculpa.</p>
 </div>
 </section>
 
-<section class="passo" id="p7">
-<div class="passo-topo">
-<div class="passo-n">07</div>
-<div>
-<div class="passo-rot">Passo 7</div>
-<h3>A voz nos quatro eixos, o vocabulário contado, e a fachada</h3>
-</div>
-</div>
+<section class="passo dele" id="p7">
+  <div class="turno-topo">
+    <span class="turno-n">Turno 7 de 7</span>
+    <span class="quem ele">O especialista</span>
+    <h3>A voz nos quatro eixos, o vocabulário contado, e a fachada</h3>
+  </div>
 
 <div class="reply-box" data-advisor="Especialista em Personalidade e Voz">
 <p>A voz é uma só e não muda. O tom muda com o que está em jogo. Os quatro eixos, de 1 a 5:</p>
@@ -2140,29 +2140,27 @@ e pedir que sejam lidas em voz alta na frente de quem vai dizê-las.</p></div>
 <div class="step-eyebrow">A cerca</div>
 <h2>O que este agente <em>não faz</em>, e diz antes.</h2>
 
-<div class="rec-grid">
-<div class="rec-col yes">
-<h4>Faz</h4>
-<ul>
-<li>conta quantas vezes por mês a marca fala, e por quantas bocas</li>
-<li>compara três temperamentos na mesma régua, com o do concorrente já riscado</li>
-<li>escreve a voz nos quatro eixos e os tons por situação</li>
-<li>escreve uma frase de orgulho para cada renúncia, pronta para entregar a quem atende</li>
-<li>conta o vocabulário das falas dos clientes, e realoca o que não passou</li>
-</ul>
-</div>
-<div class="rec-col no">
-<h4>Não faz</h4>
-<ul>
-<li><strong>não escolhe cor, forma nem símbolo.</strong> São as camadas 6 e 7, e as duas dependem
-desta estar pronta</li>
-<li><strong>não escreve o texto do site.</strong> É a camada 5, e ela escreve com esta voz</li>
-<li><strong>não treina a equipe.</strong> Ele entrega as frases; quem senta com as pessoas é você</li>
-<li><strong>não inventa o vocabulário.</strong> Sem as falas da camada 1, ele entrega marcado como
-hipótese e manda fazer as cinco ligações</li>
-</ul>
-</div>
-</div>
+<div class="contraste trio">
+      <div class="ctr faz"><span class="ctr-selo">Ele faz</span>
+        <h4>Conta quantas vezes a marca fala</h4>
+        <p>Por mês, e por quantas bocas. É essa régua que escolhe o temperamento, e não o gosto.</p></div>
+      <div class="ctr faz"><span class="ctr-selo">Ele faz</span>
+        <h4>Escreve a voz em quatro eixos</h4>
+        <p>Com os tons por situação, e o vocabulário contado das falas dos clientes.</p></div>
+      <div class="ctr faz"><span class="ctr-selo">Ele faz</span>
+        <h4>Escreve uma frase de orgulho por renúncia</h4>
+        <p>Uma para cada renúncia da camada 2, pronta para entregar a quem atende.</p></div>
+      <div class="ctr nao"><span class="ctr-selo">Ele não faz</span>
+        <h4>Escolher cor, forma ou símbolo</h4>
+        <p>São as camadas 6 e 7, e as duas dependem desta estar pronta.</p></div>
+      <div class="ctr nao"><span class="ctr-selo">Ele não faz</span>
+        <h4>Escrever o texto do site</h4>
+        <p>É a camada 5, e ela escreve com esta voz.</p></div>
+      <div class="ctr nao"><span class="ctr-selo">Ele não faz</span>
+        <h4>Inventar o vocabulário</h4>
+        <p>Sem as falas da camada 1, ele entrega marcado como hipótese e manda conferir.</p></div>
+    </div>
+
 
 <div class="aviso atencao">
 <div class="aviso-t">Uma tensão com a camada 1, e a jornada a preserva</div>
