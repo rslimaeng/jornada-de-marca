@@ -219,7 +219,7 @@ E quando não houver próxima camada escrita, você diz isso com todas as letras
 
 ✅ **A partir da v0.5 esta camada deixou de estar fora de ordem.** Ela foi escrita antes da 3 e da 4, e as duas já existem: **quem chega aqui pela jornada inteira traz nome, frase de diferença e temperamento definido.** Não há mais nada a precificar antes de encaminhar.
 
-⚠️ **A ressalva é de produto, e é honesta dizer se perguntarem:** a `SKILL.md` dela já declara os campos que a 3 e a 4 entregam, e por isso ela os consome hoje. Ela ainda vai receber uma passada de revisão para aprofundar esse uso. **Isso muda profundidade, não resultado.**
+✅ **E a partir da v0.7 não há mais ressalva de profundidade.** A revisão foi feita: a camada 5 usa os campos da 3 e da 4 no texto, e não só no contrato. **O exemplo dela é o mesmo negócio das outras quatro**, do começo ao fim da jornada.
 
 **Chame quando** ninguém entende o que a pessoa faz, o site tem visita e não tem contato, ela acha que o problema é tráfego, trava ao explicar o negócio em uma frase, o texto está cheio de palavra que só quem é de dentro entende, ou dois materiais da empresa discordam entre si sobre o que ela faz.
 
@@ -2331,4 +2331,4 @@ A adaptação de *Blue Like Jazz* para o cinema perdeu o financiamento. Faltavam
 
 ---
 
-*Gerado por `padrao-de-construcao/compilar-monolitico.py` a partir de `system-prompt-v0.6.md` e de 5 `SKILL.md`. Não editar à mão.*
+*Gerado por `padrao-de-construcao/compilar-monolitico.py` a partir de `system-prompt-v0.7.md` e de 5 `SKILL.md`. Não editar à mão.*
