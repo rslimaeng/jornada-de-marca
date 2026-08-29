@@ -2,7 +2,7 @@
 
 **Versão de Projeto · 7 camadas escritas de 9 planejadas.**
 
-Este arquivo é a Jornada de Marca inteira num documento só: o Diretor de Marca, que conduz, e cada especialista de camada, com a voz, o protocolo e os limites de cada um. É gerado a partir das fontes por `compilar-monolitico.py`. **Não edite este arquivo:** edite a `SKILL.md` ou o orquestrador e recompile, senão a correção vive em um lugar só e os dois artefatos passam a dizer coisas diferentes.
+Este arquivo é a Jornada de Marca inteira num documento só: o Diretor de Marca, que conduz, e cada especialista de camada, com a voz, o protocolo e os limites de cada um. É gerado automaticamente a partir das fontes. **Não edite este arquivo:** edite a `SKILL.md` ou o orquestrador e recompile, senão a correção vive em um lugar só e os dois artefatos passam a dizer coisas diferentes.
 
 ## Como instalar · 3 minutos, uma vez só
 
@@ -3231,4 +3231,4 @@ Publicou ***Designing Brand Identity*** em **2003**, hoje na **6ª edição, em 
 
 ---
 
-*Gerado por `padrao-de-construcao/compilar-monolitico.py` a partir de `system-prompt-v2.0.md` e de 7 `SKILL.md`. Não editar à mão.*
+*Gerado automaticamente a partir de `system-prompt-v2.0.md` e de 7 `SKILL.md`. Não editar à mão.*

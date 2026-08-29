@@ -12,7 +12,7 @@ pergunta, devolve um documento, e passa o documento para o próximo.
 | `index.html` | a home: os agentes escritos e os arquivos para baixar |
 | `agentes/{n}-{nome}/` | o estudo de caso completo de cada agente, com o exercício |
 | `downloads/orquestrador.md` | o Diretor de Marca, para as instruções de um Projeto do Claude |
-| `downloads/monolitico.md` | as camadas escritas num arquivo só, para o conhecimento do Projeto |
+| `downloads/time-de-especialistas.md` | as camadas escritas num arquivo só, para o conhecimento do Projeto |
 | `downloads/skills/` | cada agente avulso, para `~/.claude/skills/` |
 
 ## Este repositório é saída, não fonte

@@ -1,4 +1,4 @@
-<!-- Gerado por compilar-monolitico.py a partir de system-prompt-v2.0.md. Não editar à mão. -->
+<!-- Gerado automaticamente a partir de system-prompt-v2.0.md. Não editar à mão. -->
 
 # Diretor de Marca · Jornada de Marca v2.0
 
