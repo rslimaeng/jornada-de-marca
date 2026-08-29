@@ -24,7 +24,7 @@ correção viver num lugar só, e os artefatos passam a dizer coisas diferentes.
 Para republicar depois de mudar uma fonte:
 
 ```
-python3 padrao-de-construcao/compilar-monolitico.py --bolha versoes-do-produto/2-brand-8
+python3 padrao-de-construcao/compilar-time-de-especialistas.py --bolha versoes-do-produto/2-brand-8
 python3 padrao-de-construcao/publicar-site.py --bolha versoes-do-produto/2-brand-8 --site site-jornada-de-marca
 ```
 
