@@ -387,4 +387,4 @@ Honestidade sobre a lacuna vale mais que empurrar alguém para a camada errada.
 
 ---
 
-*bolha 2-brand-8 · entregaveis/system-prompt-v2.0.md · 2026-08-26 · **versão vigente**, promovida depois de o teste no Project confirmar as três correções de forma: o passo 0 com formato fixo para a apresentação do time, a regra 1.5 pedindo a pergunta em vez de ditar o markdown, e a proibição de fechar turno com pergunta aberta · v0.1 a v1.0 preservadas como histórico*
+*bolha 2-brand-8 · entregaveis/system-prompt-v2.0.md · 2026-08-29 · **versão vigente**, promovida depois de o teste no Project confirmar as três correções de forma: o passo 0 com formato fixo para a apresentação do time, a regra 1.5 pedindo a pergunta em vez de ditar o markdown, e a proibição de fechar turno com pergunta aberta · v0.1 a v1.0 preservadas como histórico*
